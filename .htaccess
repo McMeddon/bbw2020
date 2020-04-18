@@ -1,0 +1,12 @@
+#mod_rewrite neuschreiben von .html endung
+
+RewriteEngine on
+
+#wird nicht auf existierende folder angewendet
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#prufung nach dem verzeichnis mit html endung
+RewriteCond %{REQUEST_FILENAME}\.html -f 
+
+#Anzeigen der seiten mit html endung
+RewriteRule ^(.*)$ $1.html [NC,L]

@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\Desktop\\twentytwenty-child"
+		},
+		{
+			"name": "SSH FS - jacobautoglas",
+			"uri": "ssh://jacobautoglas/"
+		}
+	],
+	"settings": {}
+}

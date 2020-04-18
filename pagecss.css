@@ -1,0 +1,16 @@
+
+content{   display: -ms-grid; margin-top: 3rem; margin:5%;}
+
+content>fliestext{ 
+    
+    display:grid;
+    width: 100%;
+    max-width: 580px;
+    margin:auto;
+  
+     }
+
+@media screen and (min-width:900px){
+
+    content>fliestext{ margin-left: 5%;}
+}
