@@ -1,16 +1,126 @@
+/*--------------------------------------------------------------*/
+/* [0] Global CSS STYLES
+/*--------------------------------------------------------------*/
 
-content{   display: -ms-grid; margin-top: 3rem; margin:5%;}
+/*--------------------------------------------------------------*/
+/* [0] TOC
+/* [1] Default content wrapper styles
+/* [2] Startseiten styles
+/* [3] 
+/* [4] 
+/* [5] 
+/* [6] 
+/* [7] 
 
-content>fliestext{ 
-    
-    display:grid;
-    width: 100%;
-    max-width: 580px;
-    margin:auto;
-  
-     }
+
+
+
+/*--------------------------------------------------------------*/
+/* [1] Default content wrapper styles
+/*--------------------------------------------------------------*/
+content{
+        display:grid; 
+        color:var(--txt-light); 
+        z-index:9999;
+
+        margin-top: 1rem; 
+        margin:2%;
+    }
+
+content>fliestext{     
+                    display:grid;
+                    width: 100%;
+                    max-width: 580px;
+                    margin:auto;
+                    }
 
 @media screen and (min-width:900px){
 
-    content>fliestext{ margin-left: 5%;}
+content>fliestext{ margin-left: 5%;}
 }
+
+/*--------------------------------------------------------------*/
+/* [2] Startseiten styles
+/*--------------------------------------------------------------*/
+/* [2.1] Herobanner*/
+#myVideo {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+
+content>herobanner{height: 100vh;  display:grid;align-content: center; justify-content: center; text-align: center;}
+content>herobanner>mainframe{ }
+content>herobanner>mainframe>.herologo{ width:100%;max-width:340px; margin-bottom:-240px; padding:-10px; filter: invert();}
+content>herobanner>mainframe>h1{color:var(--txt-light); font-weight:600; font-size: 3em; padding-top:50%; margin:0; z-index: 123;}
+content>herobanner>mainframe>p{color:var(--txt-light);font-weight: 100; font-size: 1.25em;}
+
+
+
+/* [2.1] Startseiten logo animation
+/*--------------------------------------------------------------*/
+ @keyframes intro{
+     0% {opacity: 0%;}
+     100% {opacity: 100%;}
+}
+
+/* [2.2] kacheln*/
+@media screen and (min-width: 900px){content>kacheln{
+                                                        display:grid;
+                                                        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr))  ;
+                                                        grid-template-rows: 450px; 
+                                                    }
+}
+content>kacheln>kachel>.card-tall{      grid-template-rows:span 2 / auto ; }
+content>kacheln>kachel>.card-wide{      grid-template-columns: span 2 / auto ; }
+content>kacheln>kachel>.card-big{      grid-column: span 2 / auto ; grid-row: span 2 / auto ; }
+
+content>kacheln>kachel{ margin:2px;      background-color: var(--bg);    padding:5%;     display:grid;    justify-content: center;    transition: filter 150ms;}
+content>kacheln>kachel:hover{   filter: brightness(1.4); cursor: pointer;} 
+
+content>kacheln>kachel>h3{color:var(--txt-light);}
+content>kacheln>kachel>p{color:var(--txt-light);}
+content>kacheln>kachel>img{}
+
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/* [3] Livestream - Creator Icons
+/*--------------------------------------------------------------*/
+#live{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    padding: 5%;
+    align-items:center;
+    color: var(--txt-light);
+    background-repeat: none;
+}
+.frontpageh2{   color: var(--txt-light);  font-size: 3em; text-decoration: underline; margin-top: 1em;}
+/* [3] Livestream - Creator Icons
+/*--------------------------------------------------------------*/
+.creator{
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+            background-repeat: none;
+            max-height:cal(var(--nav-size)*2) ;
+            max-width: cal(var(--nav-size)*2);
+            padding:5%;
+            padding-bottom:-10px;
+            transition: 200ms;
+            margin-bottom: -10px;
+            border: var(--border)
+        }
+
+.creator:hover{ background-color: var(--bg); border:1px solid var(--txt-dark); opacity: 1.4; }
+.creator>a:hover{ filter:opacity(1.4);}
+.creator>a>img{border-radius: 100%; margin-bottom:-0px;}
+.creator>a{ text-decoration: none; color: var(--txt-light);    transition: filter 300ms;}
+.creator>a>h3{ font-size: 2em; margin:0; }
