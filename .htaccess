@@ -1,6 +1,6 @@
 #mod_rewrite neuschreiben von .html endung
 
-RewriteEngine on
+RewriteEngine off
 
 #wird nicht auf existierende folder angewendet
 RewriteCond %{REQUEST_FILENAME} !-d

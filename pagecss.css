@@ -34,7 +34,7 @@ content>fliestext{
                     margin:auto;
                     }
 
-@media screen and (min-width:900px){
+@media screen and (min-width: 800px){
 
 content>fliestext{ margin-left: 5%;}
 }
@@ -59,17 +59,8 @@ content>herobanner>mainframe>.herologo{ width:100%;max-width:340px; margin-botto
 content>herobanner>mainframe>h1{color:var(--txt-light); font-weight:600; font-size: 3em; padding-top:50%; margin:0; z-index: 123;}
 content>herobanner>mainframe>p{color:var(--txt-light);font-weight: 100; font-size: 1.25em;}
 
-
-
-/* [2.1] Startseiten logo animation
-/*--------------------------------------------------------------*/
- @keyframes intro{
-     0% {opacity: 0%;}
-     100% {opacity: 100%;}
-}
-
 /* [2.2] kacheln*/
-@media screen and (min-width: 900px){content>kacheln{
+@media screen and (min-width: 800px){content>kacheln{
                                                         display:grid;
                                                         grid-template-columns: repeat(auto-fit, minmax(30%, 1fr))  ;
                                                         grid-template-rows: 450px; 
@@ -79,11 +70,13 @@ content>kacheln>kachel>.card-tall{      grid-template-rows:span 2 / auto ; }
 content>kacheln>kachel>.card-wide{      grid-template-columns: span 2 / auto ; }
 content>kacheln>kachel>.card-big{      grid-column: span 2 / auto ; grid-row: span 2 / auto ; }
 
-content>kacheln>kachel{ margin:2px;      background-color: var(--bg);    padding:5%;     display:grid;    justify-content: center;    transition: filter 150ms;}
+content>kacheln>kachel{ margin:2px;      background-color: var(--bg);    padding:5%;     display:grid;    justify-content: start; align-items: end; padding-bottom: 15%;   transition: filter 150ms;}
 content>kacheln>kachel:hover{   filter: brightness(1.4); cursor: pointer;} 
 
+content>kacheln>kachel a,p{color:var(--txt-light);}
+content>kacheln>kachel a:hover{color:var(--primary);}
 content>kacheln>kachel>h3{color:var(--txt-light);}
-content>kacheln>kachel>p{color:var(--txt-light);}
+content>kacheln>kachel p{color:var(--txt-light); font-size: 1.2em;}
 content>kacheln>kachel>img{}
 
 
