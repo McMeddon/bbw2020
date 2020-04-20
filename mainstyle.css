@@ -235,26 +235,17 @@ ul{
 
   }
 
-{}
-
-
-
-input#dd{transform: rotate(0deg);}
-input#dd:checked a label.menu img {transform: rotate(180deg);}
-
-
 /*--------------------------------------------------------------*/
 /* [3] interaction animation------------------------------------*/
 /*--------------------------------------------------------------*/
 
 .denied:hover{
-    animation: headShake;
+  animation: headShake;
   animation-duration: 1.2s ;
   animation-delay: .7s ;
   animation-iteration-count: 1;
   }
-.engage:hover
-
+.engage:hover{}
 .hover:hover{
   transform: scale(1.2);
   transform: translateX(15px);
