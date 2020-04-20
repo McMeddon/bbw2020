@@ -1,0 +1,5 @@
+# robots.txt zu https://patricjacob.github.io/bbw2020/
+
+# Allow crawling of all content
+User-agent: *
+Disallow: *

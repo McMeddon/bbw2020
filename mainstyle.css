@@ -36,12 +36,16 @@
     --speed: 200ms;
     --font-size:14px;
 }
-a{text-decoration: none;}
+a{text-decoration: none; color: var(--txt-light);} 
 html { background-color: var(--bg-accent); font-family: sans-serif;}
 
 body { margin:0;  padding:0; font-family: 'Kanit', sans-serif; }
 h3,h4,h5,h6{ font-size: 3rem; font-weight: 200;}
 h1,h2{ font-weight: 600;}
+
+@media screen and ( max-width:800px){
+  .desktop{ display:none;}
+}
 
 
 /*--------------------------------------------------------------*/
@@ -57,7 +61,7 @@ nav {
     /* width: 100%; */
     justify-content: center;
     align-items: center;
-    grid-template-columns: 1fr  auto; 
+    grid-template-columns: 1fr 1fr auto; 
     padding:7px;
     border-bottom: 1px solid var(--halfwhite);
     z-index: 99999;
@@ -76,7 +80,7 @@ nav.defaultnav{
 
     justify-content: center;
     align-items: center;
-    grid-template-columns: 1fr  auto; 
+    grid-template-columns: 1fr auto; 
 
     padding:7px;
     border-bottom: 1px solid var(--txt-light);
@@ -187,29 +191,27 @@ nav>ul>li:hover>ul {display:grid; float: right;}
 
 
 ul{  
-    display:block;
-    list-style-type: none;
-    text-align:center;        
+  display:block;
+  list-style-type: none;
+  text-align:center;        
   }
-  ul>li{
 
-        display: inline-block;
-        color: var(--txt-light);
-        font-family: sans-serif;
-      font-weight: 800;
-        font-size: 20px;
-       /* padding: 10px 15px;; */
-        position:relative;
-    
+  ul>li{
+  display: inline-block;
+  color: var(--txt-light);
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  position:relative;
   }
+
   ul>li>ul>li:hover{
-      display:block;
-    background: var(--bg-accent) ;
-    color: #000;
-    border-radius: 5px;
-    
-    
+  display:block;
+  background: var(--bg-accent) ;
+  color: #000;
+  border-radius: 5px;
   }
+
   ul>li>a{color:var(--txt-light);}
   ul>li>.dropdown{
     display:none;
@@ -245,33 +247,56 @@ ul{
   animation-delay: .7s ;
   animation-iteration-count: 1;
   }
-.engage:hover{}
+
+/* .engage:hover{
+  transform: scale(1.2);
+  transform: translateY(-5px);
+  transition: 200ms; 
+} */
 .hover:hover{
   transform: scale(1.2);
-  transform: translateX(15px);
+  transform: translateY(-2px);
+  transition: 200ms ease-in-out;
+  z-index: 9999;
+  
+  -webkit-box-shadow: 0px 10px 21px -8px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 21px -8px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 21px -8px rgba(0,0,0,0.75);
+
 }
 
 
 /*--------------------------------------------------------------*/
-/* [3] Buttons------------------------------------*/
+/* [4] Buttons------------------------------------*/
 /*--------------------------------------------------------------*/
 
 button{
   margin:1%; 
-  padding:12px; 
-  padding-right: 25px; 
+  padding:14px; 
+  padding-right: ; 
   background-color: var(--transparent); 
   border: none; 
   cursor: pointer; 
-  border-radius: 25px; 
-  min-width:90px; 
+  border-radius: 4px;
+  
+  min-width:120px; 
   font-size: calc(var(--font-size)*1.2vw); 
   text-align: center;
+
+  justify-content: center;
+  align-items: center;
+  transition: var(--speed);
 }
-button.button{margin:1%; padding:9px; background-color: var(--bg-accent); border: none; color: var(--txt-light);}
+
+button.dark{background-color: var(--bg-accent); }
+button.light{color: var(--txt-dark); background-color: var(--txt-light); }
+button.round{border-radius: 25px;}
+button.button{margin:1%; background-color: (--bg-accent); border: none; color: var(--txt-light);}
 button.buttoncolored{background-color: var(--primary); color: var(--txt-light);}
 button.buttontransparent{border:2px solid var(--primary); color: var(--primary);}
 
-button.button:hover{background-color: var(--txt-dark);}
+/* [4.1] Buttons hover------------------------------------*/
+/*--------------------------------------------------------------*/
+button:hover{background-color: var(--bg); color: var(--txt-light);}
 button.buttoncolored:hover{background-color: var(--primarydark);}
 button.buttontransparent:hover{background-color: var(--primary); color: var(--txt-light);}
