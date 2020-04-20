@@ -4,15 +4,21 @@
 
 /*--------------------------------------------------------------*/
 /* [0] TOC
-/* [1] Default content wrapper styles
-/* [2] Startseiten styles
-/* [3] 
+/* [1] Global page styles
+/* [2] Default content wrapper styles
+/* [3] Startseiten styles
 /* [4] 
 /* [5] 
 /* [6] 
 /* [7] 
+*/ 
 
-
+.herobannerH1{
+  font-size: 10em;
+  font-weight: 100;
+  padding: 1em;
+  position: relative;
+}
 
 
 /*--------------------------------------------------------------*/
@@ -53,18 +59,7 @@ content>fliestext{ margin-left: 5%;}
                       
         }
 
-
-
-/* .img-gradient{
-    position:relative;
-    display:inline-block;
-  } */
-  
-  
-  /* 
-  #002f4b,#dc4225 
-  Convert HEX to RGBA - http://hex2rgba.devoth.com/
-  */
+heroimage img {min-height: 50%; top:0;} /*hero banner img größe reduzierung*/
   .img-gradient:after {
     content:'';
     position:absolute;
@@ -75,11 +70,13 @@ content>fliestext{ margin-left: 5%;}
   }
   .img-gradient img{
     display:block;
+    filter: blur(10px);
+    padding-bottom: 25px;
   }
 
 
-content>herobanner{height: 100vh;  display:grid;align-content: center; justify-content: center; text-align: center;}
-content>herobanner>mainframe{ }
+content>herobanner{height: 100vh;  display:grid; text-align: center;}
+content>herobanner>mainframe{ display:grid; align-content: center; justify-content: center; }
 content>herobanner>mainframe>.herologo{ width:100%;max-width:340px; margin-bottom:-240px; padding:-10px; filter: invert();}
 content>herobanner>mainframe>h1{color:var(--txt-light); font-weight:600; font-size: 3em; padding-top:50%; margin:0; z-index: 123;}
 content>herobanner>mainframe>p{color:var(--txt-light);font-weight: 100; font-size: 1.25em;}
