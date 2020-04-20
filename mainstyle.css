@@ -52,9 +52,10 @@ h1,h2{ font-weight: 600;}
 /* [2] navbar css-----------------------------------------------*/
 /*--------------------------------------------------------------*/
 
-#tsip{position: absolute; left:-999999999999px;} /* moving TS IP input field offscreen*/
-#rotateme{transition: var(--speed);}
-#rotateme.checked{transform: rotate(180deg);}
+.offscreen{position: absolute; left:-999999999999px;} /* offscreen values like TS IP input field moved offscreen*/
+
+.rotateable{transition: var(--speed);}
+.rotateable.rotated{transform: rotate(180deg);}
 
 nav {    
     display:grid;
