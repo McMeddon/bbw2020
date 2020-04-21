@@ -28,21 +28,24 @@
     --primarydark:darkred;
     --txt-light:#ededed;
     --txt-dark:#222;
+
     --bg:#242526;
+    --bg-light:#555;
     --bg-accent:#484a4d;
     --nav-size:70px; 
     --border: 1px solid #474a4d ;  
     --border-radius:8px;
     --speed: 200ms;
     --font-size:14px;
+    --letter-spacing:-0.0415625em;
 }
 a{text-decoration: none; color: var(--txt-light);} 
 html { background-color: var(--bg-accent); font-family: sans-serif;}
 
 body { margin:0;  padding:0; font-family: 'Kanit', sans-serif; }
-h3,h4,h5,h6{ font-size: 3rem; font-weight: 200;}
-h1,h2{ font-weight: 600;}
-
+h1,h2,h3,h4,h5,h6{font-family: Montserrat; letter-spacing: var(--letter-spacing);}
+h3,h4,h5,h6{ font-size: 3rem; font-weight: 200; }
+h1,h2{ font-weight: 600; }
 @media screen and ( max-width:800px){
   .desktop{ display:none;}
 }
@@ -51,8 +54,6 @@ h1,h2{ font-weight: 600;}
 /*--------------------------------------------------------------*/
 /* [2] navbar css-----------------------------------------------*/
 /*--------------------------------------------------------------*/
-
-.offscreen{position: absolute; left:-999999999999px;} /* offscreen values like TS IP input field moved offscreen*/
 
 .rotateable{transition: var(--speed);}
 .rotateable.rotated{transform: rotate(180deg);}
@@ -99,8 +100,8 @@ nav.defaultnav{
 
     /*-2% über den contentwrapper für fullwidth*/
     position: relative;    
-    margin-right:-2%;
-    margin-left:-2%;
+   /*  margin-right:-2%;
+    margin-left:-2%; */
     
     padding-left:4%;
     padding-right:4%;
@@ -115,7 +116,7 @@ nav>logo>a>h2{color:var(--txt-light); text-decoration:none; text-decoration-line
 
 nav>ul{   display:grid; justify-content:flex-end; list-style-type: none; padding:0; display:inline-flex;  }
 nav>ul>li  { 
-    width: calc(var(--nav-size)*0.8); 
+    
     justify-content: flex-end;
 }
 nav>ul>li>a {
@@ -124,12 +125,12 @@ nav>ul>li>a {
 
 
     --button-size:calc(var(--nav-size)*0.6);
-    width: var(--button-size);
+    min-width: var(--button-size);
     height: var(--button-size);
 
 
     background-color: var(--bg-accent);
-    border-radius:50%;
+    border-radius:50px;
     margin: 2px;
     display: flex;
     align-items: center; 

@@ -13,14 +13,26 @@
 /* [7] 
 */ 
 
-.herobannerH1{
-  font-size: 10em;
-  font-weight: 100;
-  padding: 1em;
-  position: relative;
+/*--------------------------------------------------------------*/
+/* [1] dropIn Klassen
+/*--------------------------------------------------------------*/
+@media screen and (max-width:800px){
+  .herobannerH1{  font-size: 60px !important;}
 }
+.herobannerH1{
+  font-size: 10rem;
+  font-weight: 100;
+  padding: .1em;
+  position: relative;  
+}
+.fullheight{height: 100vh;}
+.halfheight{height: 50vh;}
+.fullwidth{width:100%;}
+
+.floatcenter{display:grid;align-items: center; justify-content: center;}
 
 
+.offscreen{position: absolute; left:-999999999999px;} /* offscreen values like TS IP input field moved offscreen*/
 /*--------------------------------------------------------------*/
 /* [1] Default content wrapper styles
 /*--------------------------------------------------------------*/
@@ -56,6 +68,7 @@ content>fliestext{ margin-left: 5%;}
             min-width: 100%;
             min-height: 100%;
             z-index: -1;
+            
                       
         }
 
@@ -66,7 +79,9 @@ heroimage img {min-height: 50%; top:0;} /*hero banner img größe reduzierung*/
     left:0; top:0;
     width:100%; height:100%;
     display:inline-block;
-    background: linear-gradient(0deg, rgba(72,74,77,1) 20%, rgba(34,34,34,.1) 100%);
+    background: linear-gradient(0deg, rgba(72,74,77,1) 20%, rgba(34,34,34,.1) 70%);
+    z-index: -1;
+    
   }
   .img-gradient img{
     display:block;
@@ -75,25 +90,26 @@ heroimage img {min-height: 50%; top:0;} /*hero banner img größe reduzierung*/
   }
 
 
-content>herobanner{height: 100vh;  display:grid; text-align: center;}
+content>herobanner{display:grid; text-align: center;}
 content>herobanner>mainframe{ display:grid; align-content: center; justify-content: center; }
 content>herobanner>mainframe>.herologo{ width:100%;max-width:340px; margin-bottom:-240px; padding:-10px; filter: invert();}
 content>herobanner>mainframe>h1{color:var(--txt-light); font-weight:600; font-size: 3em; padding-top:50%; margin:0; z-index: 123;}
 content>herobanner>mainframe>p{color:var(--txt-light);font-weight: 100; font-size: 1.25em;}
 
 /* [2.2] kacheln*/
-@media screen and (min-width: 800px){content>kacheln{
-                                                        display:grid;
-                                                        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr))  ;
-                                                        grid-template-rows: 450px; 
-                                                    }
+@media screen and (min-width: 800px){
+  content>kacheln{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    grid-template-rows: 100%; 
+  }
 }
 content>kacheln>kachel>.card-tall{      grid-template-rows:span 2 / auto ; }
 content>kacheln>kachel>.card-wide{      grid-template-columns: span 2 / auto ; }
 content>kacheln>kachel>.card-big{      grid-column: span 2 / auto ; grid-row: span 2 / auto ; }
 
-content>kacheln>kachel{ margin:2px;      background-color: var(--bg);    padding:5%;     display:grid;    justify-content: start; align-items: end; padding-bottom: 15%;   transition: filter 150ms;}
-content>kacheln>kachel:hover{   filter: brightness(1.4); cursor: pointer;} 
+content>kacheln>kachel{ margin:2px;      background-color: var(--bg);    padding:5%;     display:grid;    justify-content: start; align-items: start; padding-bottom: 15%;   transition: filter 150ms;}
+content>kacheln>kachel:hover{ background-color: var(--bg-light); cursor: pointer;} 
 
 content>kacheln>kachel a,p{color:var(--txt-light);}
 content>kacheln>kachel a:hover{color:var(--primary);}
