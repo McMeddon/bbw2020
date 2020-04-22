@@ -63,7 +63,7 @@ nav {
     /* width: 100%; */
     justify-content: center;
     align-items: center;
-    grid-template-columns: 1fr 1fr auto; 
+    grid-template-columns: 1fr auto min-content; 
     padding:7px;
     border-bottom: 1px solid var(--halfwhite);
     z-index: 99999;
@@ -93,8 +93,8 @@ nav.defaultnav{
     display:grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(aut-fit, minmax(1fr auto)); 
-    height: 10vh;      
+    grid-template-columns: 1fr 1fr auto; 
+    min-height: 10vh;      
     border-top: 1px solid var(--txt-light);
     z-index: 99999;
 
