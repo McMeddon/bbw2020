@@ -11,7 +11,7 @@
 /* [4] 
 /* [5] 
 /* [6] 
-/* [7] 
+/* [7] Override Thirdparty Styles
 /*--------------------------------------------------------------*/
 
 
@@ -302,3 +302,12 @@ button.buttontransparent{border:2px solid var(--primary); color: var(--primary);
 button:hover{background-color: var(--bg); color: var(--txt-light);}
 button.buttoncolored:hover{background-color: var(--primarydark);}
 button.buttontransparent:hover{background-color: var(--primary); color: var(--txt-light);}
+
+
+/*--------------------------------------------------------------*/
+/* [7] Override Thirdparty Styles-------------------------------*/
+/*--------------------------------------------------------------*/
+
+.alertify-notifier{
+  z-index: 99999;
+}

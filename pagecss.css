@@ -156,5 +156,38 @@ content>kacheln>kachel>img{}
 .creator>a{ text-decoration: none; color: var(--txt-light);    transition: filter 300ms;}
 .creator>a>h3{ font-size: 2em; margin:0; }
 
+/* [3.1] TwitchStream
+/*--------------------------------------------------------------*/
+
+.vertical-scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+  align-content: center;
+}
+
+.vertical-list-item {
+  display: inline-block;
+  color: var(--txt-light);
+  text-align: center;
+}
+
+.circular--square {
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
+}
+
+.streamcontent{
+  display: grid;
+  /*grid-template-columns: max-content min-content;*/
+  grid-template-rows: auto min-content;
+}
+
+.twitch-player iframe {
+  width: 100%;
+  height: 100%;
+}
+
 
 
