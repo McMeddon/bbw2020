@@ -289,19 +289,34 @@ button{
   align-items: center;
   transition: var(--speed);
 }
+.button{  margin:1%; 
+  padding:14px; 
+  padding-right: ; 
+  background-color: var(--transparent); 
+  border: none; 
+  cursor: pointer; 
+  border-radius: 4px;
+  
+  min-width:120px; 
+  font-size: calc(var(--font-size)*1.2vw); 
+  text-align: center;
 
-button.dark{background-color: var(--bg-accent); }
-button.light{color: var(--txt-dark); background-color: var(--txt-light); }
-button.round{border-radius: 25px;}
-button.button{margin:1%; background-color: (--bg-accent); border: none; color: var(--txt-light);}
-button.buttoncolored{background-color: var(--primary); color: var(--txt-light);}
-button.buttontransparent{border:2px solid var(--primary); color: var(--primary);}
+  justify-content: center;
+  align-items: center;
+  transition: var(--speed);}
+
+.button.dark{background-color: var(--bg-accent); }
+.button.light{color: var(--txt-dark); background-color: var(--txt-light); }
+.button.round{border-radius: 25px;}
+.button.button{margin:1%; background-color: (--bg-accent); border: none; color: var(--txt-light);}
+.button.buttoncolored{background-color: var(--primary); color: var(--txt-light);}
+.button.buttontransparent{border:2px solid var(--primary); color: var(--primary);}
 
 /* [4.1] Buttons hover------------------------------------*/
 /*--------------------------------------------------------------*/
-button:hover{background-color: var(--bg); color: var(--txt-light);}
-button.buttoncolored:hover{background-color: var(--primarydark);}
-button.buttontransparent:hover{background-color: var(--primary); color: var(--txt-light);}
+.button:hover{background-color: var(--bg); color: var(--txt-light);}
+.button.buttoncolored:hover{background-color: var(--primarydark);}
+.button.buttontransparent:hover{background-color: var(--primary); color: var(--txt-light);}
 
 
 /*--------------------------------------------------------------*/
