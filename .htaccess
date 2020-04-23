@@ -4,7 +4,7 @@
 #2wird nicht auf existierende folder angewendet
 #3Anzeigen der seiten mit html endung
 
-RewriteEngine On
+RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)\.html$ /$1 [L,R=301]  
