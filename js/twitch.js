@@ -1,7 +1,26 @@
+function getUrlParam(parameter, defaultvalue) {
+    var urlparameter;
+    if (window.location.href.indexOf(parameter) > -1) {
+        urlparameter = getUrlVars()[parameter];
+    }
+    if (urlparameter === undefined)
+        urlparameter = defaultvalue
+    return urlparameter;
+}
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+
 function updateStreams() {
     var streams = ["monstercat", "handiofiblood", "meddontv"];
     for (let i = 0; i < streams.length; i++) {
-       getTwitchChannelStatus(streams[i]);
+        getTwitchChannelStatus(streams[i]);
     }
 }
 
