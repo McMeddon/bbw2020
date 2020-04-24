@@ -1,164 +1,205 @@
 <!DOCTYPE html>
 <html lang="de-DE">
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!-->
+<html>
+<!--<![endif]-->
+
 
 <head>
-    <!-- must be included after imported style to override-->
-    <link rel="stylesheet" href="./css/pagecss.css" type="text/css">
-    <link rel="stylesheet" href="./css/mainstyle.css" type="text/css">
-    <!-- FONTS-->
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,500;0,600;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
-    <title>Bladebrothers Gaming Community</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta description="BladeBrothers Gaming Home">
-    <meta name="theme-color" content="#222">
-       
-    <!--load function enabler--><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
-    <!-- include nav function--><script> $(function () {$("#nav-placeholder").load("navbar.html"); });</script> 
-    <!-- include footer function--><script> $(function () {$("#footer").load("footer.html");});</script>
-    
-    <!--favicons-->
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/bblogofavicon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
-    
-    <!-- alertify include the style -->
-    <script src="./js/alertify.min.js"></script>
-    <link rel="stylesheet" href="./css/alertify.min.css" />
-    <link rel="stylesheet" href="./css/alertify.css" type="text/css">
-    <link rel="stylesheet" href="./css/themes/default.min.css" />
-    <link rel="stylesheet" href="./animate.css-master/animate.min.css">
-    
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#222222">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#222222">
+  <!--META----------------------------------------------------------->
+  <title>Bladebrothers Gaming Community</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta description="BladeBrothers Gaming Home">
+  <meta name="theme-color" content="#222">
+  <meta name="msapplication-TileColor" content="#222222">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#222222">
+  <!--END META------------------------------------------------------->
+
+  <!--STYLES--------------------------------------------------------->
+  
+  <!--EXTERNAL-->
+  <link rel="stylesheet" href="./css/alertify.min.css" />
+  <link rel="stylesheet" href="./css/alertify.css" type="text/css">
+  <link rel="stylesheet" href="./css/themes/default.min.css" />
+  <link rel="stylesheet" href="./animate.css-master/animate.min.css">
+
+  <!-- FONTS-->
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,500;0,600;0,900;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+
+  <!--PAGE STYLE-->
+  <link rel="stylesheet" href="./css/pagecss.css" type="text/css">
+  <link rel="stylesheet" href="./css/mainstyle.css" type="text/css">
+
+  <!--FAVICONS-->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/bblogofavicon.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <!--END STYLES----------------------------------------------------->
+
+  <!--SCRIPTS-------------------------------------------------------->
+
+  <!-- alertify -->
+  <script src="./js/lib/alertify.min.js"></script>
+  <!--load function enabler JQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
+  <!-- include nav function-->
+  <script> $(function () { $("#nav-placeholder").load("templates/navbar.html"); });</script>
+  <!-- include footer function-->
+  <script> $(function () { $("#footer").load("templates/footer.html"); });</script>
+
+  <!--END SCRIPTS---------------------------------------------------->
+
 </head>
 
 <body>
-<!--Menu----------------------->
-<div id="nav-placeholder" style="z-index: 99999999;"></div>
-<!--Content----------------------->
 
+  <!--Menu----------------------->
 
-<content class="animated fadeIn faster">
-  <herobanner>
-     <heroimage class="halfheight floatcenter">
+  <div id="nav-placeholder" style="z-index: 99999999;"></div>
+
+  <content class="animated fadeIn faster">
+    <herobanner>
+      <heroimage class="halfheight floatcenter">
         <div class="img-gradient"><img src="./images/devicesillustration.PNG" class="img-gradient"></div>
         <div style="z-index:9;">
           <h1 class="herobannerH1 animated fadeIn faster " style="">Umfragen</h1>
-          
+
         </div>
       </heroimage>
-   
-  </herobanner>
 
-<div><h2> Derzeitige Umfrage</h2></div>
-  
-  
-  <kacheln>
-    <content>
-      <fliestext>
-        <h3>TS oder nicht TS, das ist hier die Frage</h3>
-        <p style="text-align: end; padding-bottom: 1em;">-William Shakespear oder so</p>
-        <div>em ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        </div>
+    </herobanner>
 
-      </fliestext>
-    </content>
-    
     <div>
-      <iframe src="https://www.strawpoll.me/embed_1/19830969" style="width:100%; border:none; min-height: 500px;" >Loading poll...</iframe>
-    </div>  
+      <h2> Derzeitige Umfrage</h2>
+    </div>
 
-  </kacheln>
-<br><br><br><br><br>
-<kacheln>
-  <content>
-    <fliestext>
-      <div class="pro">
-        <h3 style="color:green;">Pro</h3>
-        <hr>
-        <br>
-        <ol>
-          <li>
-            <h4>Argument</h4>
-            <p> argumentation um dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor i</p>
-          </li>
-          <br>
-          <li>
-            <h4>Argument</h4>
-            <p> argumentation um dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor ium dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor i</p>
-          </li>
-          <br>
-          <li>
-            <h4>Argument</h4>
-            <p> argumentation um dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor i</p>
-          </li>
-          <br>
-          <li>
-            <h4>Argument</h4>
-            <p> argumentation um dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor i</p>
-          </li>
-        </ol>
+
+    <kacheln>
+      <content>
+        <fliestext>
+          <h3>TS oder nicht TS, das ist hier die Frage</h3>
+          <p style="text-align: end; padding-bottom: 1em;">-William Shakespear oder so</p>
+          <div>em ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+            sea takimata sanctus est Lorem ipsum dolor sit amet.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+            sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </div>
+
+        </fliestext>
+      </content>
+
+      <div>
+        <iframe src="https://www.strawpoll.me/embed_1/19830969"
+          style="width:100%; border:none; min-height: 500px;">Loading poll...</iframe>
       </div>
-    </fliestext>
-  </content>
-  
- 
-     <content>
-      <fliestext>
-        <div class="contra">
-          <h3 style="color:red;">Contra</h3>
-          <hr>
-          <br>
-          <ol>
-            <li>
-              <h4>Argument</h4>
-              <p> argumentation um dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor i</p>
-            </li>
+
+    </kacheln>
+    <br><br><br><br><br>
+    <kacheln>
+      <content>
+        <fliestext>
+          <div class="pro">
+            <h3 style="color:green;">Pro</h3>
+            <hr>
             <br>
-            <li>
-              <h4>Argument</h4>
-              <p> argumentation um dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor ium dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor i</p>
-            </li>
+            <ol>
+              <li>
+                <h4>Argument</h4>
+                <p> argumentation um dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor i</p>
+              </li>
+              <br>
+              <li>
+                <h4>Argument</h4>
+                <p> argumentation um dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor ium
+                  dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor i</p>
+              </li>
+              <br>
+              <li>
+                <h4>Argument</h4>
+                <p> argumentation um dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor i</p>
+              </li>
+              <br>
+              <li>
+                <h4>Argument</h4>
+                <p> argumentation um dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor i</p>
+              </li>
+            </ol>
+          </div>
+        </fliestext>
+      </content>
+
+
+      <content>
+        <fliestext>
+          <div class="contra">
+            <h3 style="color:red;">Contra</h3>
+            <hr>
             <br>
-            <li>
-              <h4>Argument</h4>
-              <p> argumentation um dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor i</p>
-            </li>
-            <br>
-            <li>
-              <h4>Argument</h4>
-              <p> argumentation um dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor i</p>
-            </li>
-          </ol>
-        </div>
+            <ol>
+              <li>
+                <h4>Argument</h4>
+                <p> argumentation um dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor i</p>
+              </li>
+              <br>
+              <li>
+                <h4>Argument</h4>
+                <p> argumentation um dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor ium
+                  dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor i</p>
+              </li>
+              <br>
+              <li>
+                <h4>Argument</h4>
+                <p> argumentation um dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor i</p>
+              </li>
+              <br>
+              <li>
+                <h4>Argument</h4>
+                <p> argumentation um dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor i</p>
+              </li>
+            </ol>
+          </div>
+        </fliestext>
+      </content>
       </fliestext>
-    </content>
-  </fliestext>
-</content>
+  </content>
 
+  <!--Footer----------------------->
 
-<!--footer----------------------->
-<div id="footer" style="z-index: 99999999;"></div>
+  <div id="footer" style="z-index: 99999999;"></div>
 </body>
+
 </html>
