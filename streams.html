@@ -20,6 +20,13 @@
     <meta description="BladeBrothers Gaming Home">
     <title>Bladebrothers Gaming Community</title>
 
+    <!--load function enabler-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
+    <!-- include nav function-->
+    <script> $(function () { $("#nav-placeholder").load("templates/navbar.html"); });</script>
+    <!-- include footer function-->
+    <script> $(function () { $("#footer").load("templates/footer.html"); });</script>
+
     <script src="./js/lib/alertify.min.js"></script>
     <!-- include the style -->
     <link rel="stylesheet" href="./css/alertify.min.css" />
@@ -36,7 +43,6 @@
     <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
     <meta name="theme-color" content="#222">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
 </head>
 
 <body>
@@ -47,12 +53,6 @@
     <!--Menu----------------------->
 
     <div id="nav-placeholder" style="z-index: 99999999;"></div>
-    <script>
-        $(function () {
-            $("#nav-placeholder").load("navbar.html");
-        });
-    </script>
-    <!--Menu----------------------->
 
     <!--Twitch-Player ------------>
     <content>
@@ -91,13 +91,6 @@
     <!--Footer----------------------->
 
     <div id="footer" style="z-index: 99999999;"></div>
-    <script>
-        $(function () {
-            $("#footer").load("templates/footer.html");
-        });
-    </script>
-    <!--Footer----------------------->
-
 
     <script>
         /* TWITCH STREAM PLAYER */

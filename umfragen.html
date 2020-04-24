@@ -23,6 +23,14 @@
   <link rel="stylesheet" href="pagecss.css" type="text/css">
 
 
+  <!--load function enabler-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
+  <!-- include nav function-->
+  <script> $(function () { $("#nav-placeholder").load("templates/navbar.html"); });</script>
+  <!-- include footer function-->
+  <script> $(function () { $("#footer").load("templates/footer.html"); });</script>
+
+
   <script src="./js/lib/alertify.min.js"></script>
   <!-- include the style -->
   <link rel="stylesheet" href="./css/alertify.min.css" />
@@ -54,13 +62,6 @@
   <!--Menu----------------------->
 
   <div id="nav-placeholder" style="z-index: 99999999;"></div>
-  <script>
-    $(function () {
-      $("#nav-placeholder").load("templates/navbar.html");
-    });
-  </script>
-  <!--Menu----------------------->
-
 
   <content class="animated fadeIn faster">
     <herobanner>
@@ -179,12 +180,6 @@
   <!--Footer----------------------->
 
   <div id="footer" style="z-index: 99999999;"></div>
-  <script>
-    $(function () {
-      $("#footer").load("templates/footer.html");
-    });
-  </script>
-  <!--Footer----------------------->
 </body>
 
 </html>

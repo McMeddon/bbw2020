@@ -19,6 +19,10 @@
 @media screen and (max-width:800px){
   .herobannerH1{  font-size: 60px !important;}
 }
+
+@media screen and (min-width:800px){
+  .floatcenter{display:grid; place-items: center; place-content: center; }
+}
 .herobannerH1{
   font-size: 10rem;
   font-weight: 100;
@@ -30,10 +34,12 @@
 .fullwidth{width:100%;}
 .halfwidth{width: 50%;}
 
-.floatcenter{display:grid;align-items: center; justify-content: center;}
 .alignbottom{display: grid; justify-items: end !important;}
 .aligncenter{display:grid; align-items: center; align-self: center; align-content: center;}
 
+.front9{z-index: 9;}
+.front99{z-index: 99;}
+.front999{z-index: 999;}
 .offscreen{position: absolute; left:-999999999999px;} /* offscreen values like TS IP input field moved offscreen*/
 /*--------------------------------------------------------------*/
 /* [1] Default content wrapper styles
@@ -74,7 +80,7 @@ content>fliestext{ margin-left: 5%;}
                       
         }
 
-heroimage img {min-height: 50%; top:0;} /*hero banner img größe reduzierung*/
+heroimage img {min-height: 50%; top:0; z-index: -1;} /*hero banner img größe reduzierung*/
   .img-gradient:after {
     content:'';
     position:absolute;
@@ -89,6 +95,7 @@ heroimage img {min-height: 50%; top:0;} /*hero banner img größe reduzierung*/
     display:block;
     filter: blur(10px);
     padding-bottom: 25px;
+    z-index: -1;
   }
 
 
@@ -110,14 +117,19 @@ content>kacheln>kachel>.card-tall{      grid-template-rows:span 2 / auto ; }
 content>kacheln>kachel>.card-wide{      grid-template-columns: span 2 / auto ; }
 content>kacheln>kachel>.card-big{      grid-column: span 2 / auto ; grid-row: span 2 / auto ; }
 
-content>kacheln>kachel{ margin:2px;      background-color: var(--bg);    padding:5%;     display:grid;    justify-content: start; align-items: start; /* padding-bottom: 15%; */   transition: filter 150ms;}
-content>kacheln>kachel:hover{ background-color: var(--bg-light); cursor: pointer;} 
+content>kacheln>kachel{ margin:2px;      background-color: var(--bg);    padding:5%;     display:grid;    justify-content: start; align-items: start; /* padding-bottom: 15%; */   transition: filter 150ms; border-radius: 4px;}
+content>kacheln>kachel:hover{ filter: brightness(1.1); cursor: pointer;} 
 
 content>kacheln>kachel a,p{color:var(--txt-light);}
 content>kacheln>kachel a:hover{color:var(--primary);}
 content>kacheln>kachel>h3{color:var(--txt-light);}
 content>kacheln>kachel p{color:var(--txt-light); font-size: 1.2em;}
 content>kacheln>kachel>img{}
+
+.two-column{display:grid; grid-template-columns:1fr auto; grid-gap:auto;}
+/* .three-column{display:grid; grid-template-columns:1fr 3fr auto; grid-gap:auto;} */
+.three-column{display:grid; grid-template-columns:1fr 1fr auto; grid-gap: 2%; align-items: center;}
+.three-right-column{display:grid; grid-template-columns: 1fr auto min-content; grid-gap: 2%; align-items: center;}
 
 
 
