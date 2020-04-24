@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de-DE">
 
-<head>
+<head id="header">
     <!--META----------------------------------------------------------->
     <title>Bladebrothers Gaming Community</title>
     <meta charset="UTF-8">
@@ -15,6 +15,9 @@
     <!--END META------------------------------------------------------->
 
     <!--STYLES--------------------------------------------------------->
+    <!--PAGE STYLE-->
+    <link rel="stylesheet" href="./css/pagecss.css" type="text/css">
+    <link rel="stylesheet" href="./css/mainstyle.css" type="text/css">
     
     <!--EXTERNAL-->
     <link rel="stylesheet" href="./css/alertify.min.css" />
@@ -25,13 +28,7 @@
     <!-- FONTS-->
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,500;0,600;0,900;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
-    <!--PAGE STYLE-->
-    <link rel="stylesheet" href="./css/pagecss.css" type="text/css">
-    <link rel="stylesheet" href="./css/mainstyle.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,500;0,600;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!--FAVICONS-->
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/bblogofavicon.png">
@@ -81,14 +78,13 @@
         <herobanner class="">
             <mainframe class="animated fadeIn faster fullheight ">
                 <video autoplay muted loop id="myVideo" class="">
-                    <source src="./video/1.mp4" type="video/mp4" defer>
+                    <source src="./video/3.mp4" type="video/mp4" defer>
                 </video>
-                <h1 class="herobannerH1 animated fadeIn fast delay-1s"
-                    style="margin: 0; padding: 0; line-height: 1; font-weight:; font-family:Satisfy; letter-spacing: 1px;">
+                <h1 class="herobannerH1 animated fadeIn fast delay-1s" style="margin: 0; padding: 0; line-height: 1; font-family:Satisfy; letter-spacing: 1px;">
                     BladeBrothers</h1>
                 <hr class="animated fadeIn slow delay-1s">
                 <h2 class="animated fadeIn slower delay-1s"> Gaming Community since 2010</h2>
-                <!--  <img alt="bladebros" src="./images/svg/chevron.svg" heigth="50px" width="50px" style="filter:invert();"
+                <!--  <img class="lazy" alt="bladebros" src="./images/svg/chevron.svg" heigth="50px" width="50px" style="filter:invert();"
                     class="animated fadeIn slower "> -->
             </mainframe>
         </herobanner>
@@ -96,7 +92,7 @@
         <kacheln>
             <kachel class=" denied" style="z-index: 9;">
                 <a href="">
-                    <img alt="bladebros" src="./images/svg/bblogored.png" width="25%">
+                    <img class="lazy" alt="bladebros" src="./images/svg/bblogored.png" width="25%">
                     <h3>Mitglied werden</h3>
                     <p>Finde hier alle Mitglieder von Bladebrothers</p>
                 </a>
@@ -113,7 +109,7 @@
 
             <kachel style="background-image: url();" class=" hover">
                 <a href="https://steamcommunity.com/groups/BladeBrothers" target="_blank">
-                    <img alt="bladebros" src="./images/svg/Steam.svg" width="25%">
+                    <img class="lazy" alt="bladebros" src="./images/svg/Steam.svg" width="25%">
                     <h3>Steam Gruppe</h3>
                     <p>Der direkte Link zu allen Mates aus der Gruppe zum schnellen Einstieg</p>
                 </a>
@@ -131,20 +127,19 @@
             </kachel>
             <kachel style="background-image: url();" class="hover">
                 <a href="">
-                    <img alt="bladebros" src="./images/svg/discord.svg" width="25%">
+                    <img class="lazy" alt="bladebros" src="./images/svg/discord.svg" width="25%">
                     <h3>Discord</h3>
-                    <h3>Jetzt beitreten</h3>
+                    <p>Jetzt beitreten</p>
                 </a>
             </kachel>
 
             <kachel style="background-image: url();" class="hover">
                 <a>
-                    <img alt="bladebros" src="./images/svg/bblogogold.png" width="25%">
+                    <img class="lazy" alt="bladebros" src="./images/svg/bblogogold.png" width="25%">
                     <h3>BladeBros Gold</h3>
                     <p>Von vielen für Alle, zum Unterstützen der Community</p>
                 </a>
             </kachel>
-
         </kacheln>
 
 
@@ -157,14 +152,14 @@
         <div id="live">
             <div class="creator">
                 <a href="./streams?monstercat">
-                    <img alt="bladebros" src="./images/kanta.PNG">
+                    <img class="lazy" alt="bladebros" src="./images/kanta.PNG">
                     <h3>Kantalupi</h3>
                     <button class="hover button buttontransparent">Ansehen</button>
                 </a>
             </div>
             <creator class="creator">
                 <a href="./streams?meddontv">
-                    <img alt="bladebros" src="./images/kanta.PNG">
+                    <img class="lazy" alt="bladebros" src="./images/kanta.PNG">
                     <h3>Meddon</h3>
                     <button class="hover button buttontransparent">Ansehen</button>
                 </a>
@@ -172,7 +167,7 @@
 
             <creator class="creator">
                 <a href="./streams?handiofiblood">
-                    <img alt="bladebros" src="./images/kanta.PNG">
+                    <img class="lazy" alt="bladebros" src="./images/kanta.PNG">
                     <h3>Energizer</h3>
                     <button class="hover button buttontransparent">Ansehen</button>
                 </a>
@@ -180,7 +175,7 @@
 
             <creator class="creator">
                 <a href="./streams">
-                    <img alt="bladebros" src="./images/kanta.PNG">
+                    <img class="lazy" alt="bladebros" src="./images/kanta.PNG">
                     <h3>Valeneros</h3>
                     <button class="hover button buttontransparent">Ansehen</button>
                 </a>
