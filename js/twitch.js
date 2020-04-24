@@ -10,18 +10,40 @@ function getUrlParam(parameter, defaultvalue) {
 
 function getUrlVars() {
     var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
         vars[key] = value;
     });
     return vars;
 }
 
-
 function updateStreams() {
-    var streams = ["monstercat", "handiofiblood", "meddontv"];
-    for (let i = 0; i < streams.length; i++) {
-        getTwitchChannelStatus(streams[i]);
+    var ul = document.getElementById('streamlist')
+   
+    for(let i = ul.childNodes.length; i--;){
+        if(ul.childNodes[i].nodeName === 'LI')
+            getTwitchChannelStatus(ul.childNodes[i].id);
     }
+    orderStreams(ul);
+}
+
+function orderStreams(ul){
+    var new_ul = ul.cloneNode(false);
+
+    var lis = [];
+    for(let i = ul.childNodes.length; i--;){
+        if(ul.childNodes[i].nodeName === 'LI')
+            if(ul.childNodes[i].classList.contains('online'))
+                lis.push(ul.childNodes[i]);
+    }
+    for(let i = ul.childNodes.length; i--;){
+        if(ul.childNodes[i].nodeName === 'LI')
+            if(!ul.childNodes[i].classList.contains('online'))
+                lis.push(ul.childNodes[i]);
+    }
+
+    for(let i = 0; i < lis.length; i++)
+        new_ul.appendChild(lis[i]);
+    ul.parentNode.replaceChild(new_ul, ul);
 }
 
 function getTwitchChannelStatus(channel) {
@@ -47,13 +69,16 @@ function getTwitchChannelStatus(channel) {
                 live = objChannel.data[0].type;
                 viewers = objChannel.data[0].viewer_count;
             }
-            var element = document.getElementById(channel);
+            //get listitem
+            var list_element = document.getElementById(channel);
+            //get corresponding button
+            var list_button = list_element.getElementsByTagName("button")[0];
             if (live === 'live') {
-                element.classList.add("online");
-                element.innerHTML = viewers;
+                list_element.classList.add("online");
+                list_button.innerHTML = viewers;
             } else {
-                element.classList.remove("online");
-                element.innerHTML = "offline";
+                list_element.classList.remove("online");
+                list_button.innerHTML = "offline";
             }
         }
     })

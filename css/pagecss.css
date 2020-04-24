@@ -179,7 +179,7 @@ content>kacheln>kachel>img{}
   align-content: center;
 }
 
-.vertical-list-item {
+.streamlistitem {
   display: inline-block;
   color: var(--txt-light);
   text-align: center;
@@ -203,13 +203,13 @@ content>kacheln>kachel>img{}
   height: 100%;
 }
 
-.button.streamButton.online {
+.streamlistitem.online .button.streamButton {
   background-color: transparent;
   border-color: green;
   color: green;
 }
 
-.button.streamButton.online:hover{
+.streamlistitem.online .button.streamButton:hover{
   color: white;
   background-color: green;
 }

@@ -22,7 +22,7 @@
     <!--END META------------------------------------------------------->
 
     <!--STYLES--------------------------------------------------------->
-    
+
     <!--EXTERNAL-->
     <link rel="stylesheet" href="./css/alertify.min.css" />
     <link rel="stylesheet" href="./css/alertify.css" type="text/css">
@@ -59,7 +59,7 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
-    
+
     <!--END STYLES----------------------------------------------------->
 
     <!--SCRIPTS-------------------------------------------------------->
@@ -82,7 +82,8 @@
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
     <script src="js/twitch.js"></script>
     <script>
-    var urlparam = getUrlParam('stream','monstercat')        
+        var urlparam = getUrlParam('stream', 'monstercat')
+        window.history.replaceState({}, document.title, "/" + "streams");    
     </script>
 
     <!--Menu----------------------->
@@ -96,28 +97,44 @@
             <div id="stream" class="twitch-player fullheight">
 
             </div>
-            <!--live----------------------->
             <div class="vertical-scrollmenu">
-                <div class="vertical-list-item">
-                    <img class="circular--square " alt="bladebros" src="./images/kanta.PNG">
-                    <p>handiofiblood</p>
-                    <button id="handiofiblood" class="hover button streamButton buttontransparent"
-                        onclick="changeChannel('handiofiblood');">Ansehen</button>
-                </div>
-                <div class="vertical-list-item">
-                    <img class="circular--square" alt="bladebros" src="./images/kanta.PNG">
-                    <p>Monstercat</p>
-                    <button id="monstercat" class="hover button streamButton buttontransparent"
-                        onclick="changeChannel('monstercat');">Ansehen</button>
-                </div>
-                <div class="vertical-list-item">
-                    <img class="circular--square" alt="bladebros" src="./images/kanta.PNG">
-                    <p>Meddontv</p>
-                    <button id="meddontv" class="hover button streamButton buttontransparent"
-                        onclick="changeChannel('meddontv');">Ansehen</button>
-                </div>
+                <ul id="streamlist" class="streamlist">
+                    <li id="handiofiblood" class="streamlistitem">
+                        <img class="circular--square" alt="bladebros" src="./images/kanta.PNG">
+                        <p>HandOfBloof</p>
+                        <button class="hover button streamButton buttontransparent"
+                            onclick="changeChannel('handiofiblood');"></button>
+                    </li>
+                    <li id="monstercat" class="streamlistitem">
+                        <img class="circular--square" alt="bladebros" src="./images/kanta.PNG">
+                        <p>Monstercat</p>
+                        <button class="hover button streamButton buttontransparent"
+                            onclick="changeChannel('monstercat');"></button>
+                    </li>
+                    <li id="meddontv" class="streamlistitem">
+                        <img class="circular--square" alt="bladebros" src="./images/kanta.PNG">
+                        <p>Meddon</p>
+                        <button class="hover button streamButton buttontransparent"
+                            onclick="changeChannel('meddontv');"></button>
+                    </li>
+                    <li id="esl_csgo" class="streamlistitem">
+                        <img class="circular--square" alt="bladebros" src="./images/kanta.PNG">
+                        <p>ESL CSGO</p>
+                        <button class="hover button streamButton buttontransparent"
+                            onclick="changeChannel('esl_csgo');"></button>
+                    </li>
+                    <li id="taketv" class="streamlistitem">
+                        <img class="circular--square" alt="bladebros" src="./images/kanta.PNG">
+                        <p>Take TV</p>
+                        <button class="hover button streamButton buttontransparent"
+                            onclick="changeChannel('taketv');"></button>
+                    </li>
+                </ul>
+                
             </div>
         </div>
+
+        
 
     </content>
     <!--Twitch-Player ------------>
