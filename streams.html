@@ -137,7 +137,8 @@
         };
         var embed = new Twitch.Embed("stream", options);
         function changeChannel(channel) {
-            embed.setChannel(channel);
+            var player = embed.getPlayer();
+            player.setChannel(channel);
         }
         /* UPDATE STREAMS STATE ONCE*/
         updateStreams();
