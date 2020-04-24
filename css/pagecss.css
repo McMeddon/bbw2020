@@ -204,6 +204,7 @@ content>kacheln>kachel>img{}
 }
 
 .button.streamButton.online {
+  background-color: transparent;
   border-color: green;
   color: green;
 }
