@@ -7,7 +7,7 @@ function preloadImage(img) {
     img.src = src;
 }
 
-cont imgOptions = {
+const imgOptions = {
     threshold: 0,
     rootMargin: "0px 0px 300px 0px" // punkt ab dem bilder geladen werden
 };
