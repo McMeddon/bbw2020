@@ -2,6 +2,7 @@
 <html lang="de-DE">
 
 <head id="header">
+ 
     <!--META----------------------------------------------------------->
     <title>Bladebrothers Gaming Community</title>
     <meta charset="UTF-8">
@@ -24,12 +25,14 @@
     <link rel="stylesheet" href="./css/alertify.css" type="text/css">
     <link rel="stylesheet" href="./css/themes/default.min.css" />
     <link rel="stylesheet" href="./animate.css-master/animate.min.css">
-
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js"></script> -->
+    <script src="./js/lazyload.js"> //lazyload eigen</script> 
+    
     <!-- FONTS-->
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,500;0,600;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    
     <!--FAVICONS-->
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/bblogofavicon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png">
@@ -84,7 +87,7 @@
                     BladeBrothers</h1>
                 <hr class="animated fadeIn slow delay-1s">
                 <h2 class="animated fadeIn slower delay-1s"> Gaming Community since 2010</h2>
-                <!--  <img class="lazy" alt="bladebros" src="./images/svg/chevron.svg" heigth="50px" width="50px" style="filter:invert();"
+                <!--  <img class="lazy" loading="lazy" alt="bladebros" src="./images/svg/chevron.svg" heigth="50px" width="50px" style="filter:invert();"
                     class="animated fadeIn slower "> -->
             </mainframe>
         </herobanner>
@@ -92,7 +95,14 @@
         <kacheln>
             <kachel class=" denied" style="z-index: 9;">
                 <a href="">
-                    <img class="lazy" alt="bladebros" src="./images/svg/bblogored.png" width="25%">
+                    <img 
+                        class="lazy" 
+                        loading="lazy" 
+                        alt="bladebros" 
+                        src="./images/svg/bblogored.png" 
+                        data-src="./images/svg/bblogored.png" 
+                        width="25%"
+                    >
                     <h3>Mitglied werden</h3>
                     <p>Finde hier alle Mitglieder von Bladebrothers</p>
                 </a>
@@ -109,7 +119,14 @@
 
             <kachel style="background-image: url();" class=" hover">
                 <a href="https://steamcommunity.com/groups/BladeBrothers" target="_blank">
-                    <img class="lazy" alt="bladebros" src="./images/svg/Steam.svg" width="25%">
+                    <img 
+                        class="lazy" 
+                        loading="lazy" 
+                        alt="bladebros" 
+                        src="./images/svg/Steam.svg" 
+                        data-src="./images/svg/Steam.svg"    
+                        width="25%"
+                        >
                     <h3>Steam Gruppe</h3>
                     <p>Der direkte Link zu allen Mates aus der Gruppe zum schnellen Einstieg</p>
                 </a>
@@ -127,7 +144,14 @@
             </kachel>
             <kachel style="background-image: url();" class="hover">
                 <a href="">
-                    <img class="lazy" alt="bladebros" src="./images/svg/discord.svg" width="25%">
+                    <img 
+                        class="lazy" 
+                        loading="lazy" 
+                        alt="bladebros" 
+                        src="./images/svg/discord.svg" 
+                        data-src="./images/svg/discord.svg" 
+                        width="25%"
+                    >
                     <h3>Discord</h3>
                     <p>Jetzt beitreten</p>
                 </a>
@@ -135,7 +159,14 @@
 
             <kachel style="background-image: url();" class="hover">
                 <a>
-                    <img class="lazy" alt="bladebros" src="./images/svg/bblogogold.png" width="25%">
+                    <img 
+                        class="lazy" 
+                        loading="lazy" 
+                        alt="bladebros" 
+                        src="./images/svg/bblogogold.png" 
+                        data-src="./images/svg/bblogogold.png" 
+                        width="25%"
+                        >
                     <h3>BladeBros Gold</h3>
                     <p>Von vielen für Alle, zum Unterstützen der Community</p>
                 </a>
@@ -152,14 +183,26 @@
         <div id="live">
             <div class="creator">
                 <a href="/streams?stream=?monstercat">
-                    <img class="lazy" alt="bladebros" src="./images/kanta.PNG">
+                    <img 
+                        class="lazy" 
+                        loading="lazy" 
+                        alt="bladebros" 
+                        src="./images/kanta.PNG"
+                        data-src="./images/kanta.PNG"
+                        >
                     <h3>Kantalupi</h3>
                     <button class="hover button buttontransparent">Ansehen</button>
                 </a>
             </div>
             <creator class="creator">
                 <a href="/streams?stream=?meddontv">
-                    <img class="lazy" alt="bladebros" src="./images/kanta.PNG">
+                    <img 
+                        class="lazy" 
+                        loading="lazy" 
+                        alt="bladebros" 
+                        src="./images/kanta.PNG"
+                        data-src="./images/kanta.PNG"
+                        >
                     <h3>Meddon</h3>
                     <button class="hover button buttontransparent">Ansehen</button>
                 </a>
@@ -167,7 +210,13 @@
 
             <creator class="creator">
                 <a href="/streams?stream=handiofiblood">
-                    <img class="lazy" alt="bladebros" src="./images/kanta.PNG">
+                    <img 
+                    class="lazy" 
+                    loading="lazy" 
+                    alt="bladebros" 
+                    src="./images/kanta.PNG"
+                    data-src="./images/kanta.PNG"
+                    >
                     <h3>Energizer</h3>
                     <button class="hover button buttontransparent">Ansehen</button>
                 </a>
@@ -175,7 +224,13 @@
 
             <creator class="creator">
                 <a href="./streams">
-                    <img class="lazy" alt="bladebros" src="./images/kanta.PNG">
+                    <img 
+                        class="lazy" 
+                        loading="lazy" 
+                        alt="bladebros" 
+                        src="./images/kanta.PNG"
+                        data-src="./images/kanta.PNG"
+                        >
                     <h3>Valeneros</h3>
                     <button class="hover button buttontransparent">Ansehen</button>
                 </a>
