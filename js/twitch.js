@@ -16,7 +16,6 @@ function getUrlVars() {
     return vars;
 }
 
-
 function updateStreams() {
     var streams = ["monstercat", "handiofiblood", "meddontv"];
     for (let i = 0; i < streams.length; i++) {
