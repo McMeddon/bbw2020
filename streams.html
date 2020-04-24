@@ -81,7 +81,6 @@
     <!--IMPORTS-------------------->
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
     <script src="js/twitch.js"></script>
-    <script src="js/steam.js"></script>
     <script>
         var urlparam = getUrlParam('stream', 'monstercat')
         window.history.replaceState({}, document.title, "/" + "streams");    
@@ -130,14 +129,12 @@
                         <button class="hover button streamButton buttontransparent"
                             onclick="changeChannel('taketv');"></button>
                     </li>
-                    <button class="hover button buttontransparent"
-                            onclick="loadBBGroupData()"></button>
                 </ul>
-                
+
             </div>
         </div>
 
-        
+
 
     </content>
     <!--Twitch-Player ------------>
