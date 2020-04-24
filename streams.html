@@ -9,7 +9,7 @@
 
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,500;0,600;0,900;1,700;1,800;1,900&display=swap"
@@ -20,7 +20,7 @@
     <meta description="BladeBrothers Gaming Home">
     <title>Bladebrothers Gaming Community</title>
 
-    <script src="./alertify.min.js"></script>
+    <script src="./js/lib/alertify.min.js"></script>
     <!-- include the style -->
     <link rel="stylesheet" href="./css/alertify.min.css" />
     <!-- include a theme -->
@@ -31,7 +31,7 @@
     <!-- must be included after imported style to override-->
     <link rel="stylesheet" href="mainstyle.css" type="text/css">
     <link rel="stylesheet" href="pagecss.css" type="text/css">
-    
+
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/bblogofavicon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
@@ -40,38 +40,20 @@
 </head>
 
 <body>
-<!--Menu----------------------->
-
-<div id="nav-placeholder" style="z-index: 99999999;"></div>
-<script>
-    $(function () {
-        $("#nav-placeholder").load("navbar.html");
-    });
-</script>
-<!--Menu----------------------->
-
     <!--IMPORTS-------------------->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
-    <script src="js/menu.js"></script>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
     <script src="js/twitch.js"></script>
-    <!--HIDDEN VALUES-------------->
-    <!--copy to clipboard ts -->
-    <input class="offscreen" id="tsip" value="46.20.46.88:10062" type="text">
 
+    <!--Menu----------------------->
 
-    <!--Menu----------------------
-    <content>
-        <div id="nav-placeholder"></div>
-    </content>
+    <div id="nav-placeholder" style="z-index: 99999999;"></div>
     <script>
         $(function () {
             $("#nav-placeholder").load("navbar.html");
         });
     </script>
-    --Menu----------------------->
+    <!--Menu----------------------->
 
-    
     <!--Twitch-Player ------------>
     <content>
         <!-- TWITCH STUFF HERE-->
@@ -84,27 +66,20 @@
                 <div class="vertical-list-item">
                     <img class="circular--square" alt="bladebros" src="./images/kanta.PNG">
                     <p>handiofiblood</p>
-                    <button class="hover button buttontransparent" onclick="changeChannel('handiofiblood');">Ansehen</button>
+                    <button id="handiofiblood" class="hover button streamButton buttontransparent"
+                        onclick="changeChannel('handiofiblood');">Ansehen</button>
                 </div>
                 <div class="vertical-list-item">
                     <img class="circular--square" alt="bladebros" src="./images/kanta.PNG">
                     <p>Monstercat</p>
-                    <button class="hover button buttontransparent" onclick="changeChannel('monstercat');">Ansehen</button>
-                </div>
-                <div class="vertical-list-item">
-                    <img class="circular--square" alt="bladebros" src="./images/kanta.PNG">
-                    <p>Handofblood</p>
-                    <button class="hover button buttontransparent" onclick="changeChannel('handiofiblood');">Ansehen</button>
+                    <button id="monstercat" class="hover button streamButton buttontransparent"
+                        onclick="changeChannel('monstercat');">Ansehen</button>
                 </div>
                 <div class="vertical-list-item">
                     <img class="circular--square" alt="bladebros" src="./images/kanta.PNG">
                     <p>Meddontv</p>
-                    <button class="hover button buttontransparent" onclick="changeChannel('meddontv');">Ansehen</button>
-                </div>
-                <div class="vertical-list-item">
-                    <img class="circular--square" alt="bladebros" src="./images/kanta.PNG">
-                    <p>Kantalupi</p>
-                    <button class="hover button buttontransparent" onclick="changeChannel('handiofiblood');">Ansehen</button>
+                    <button id="meddontv" class="hover button streamButton buttontransparent"
+                        onclick="changeChannel('meddontv');">Ansehen</button>
                 </div>
             </div>
         </div>
@@ -113,24 +88,26 @@
     <!--Twitch-Player ------------>
 
 
-    <!--FOOTER AREA-------------------------------->
+    <!--Footer----------------------->
 
     <div id="footer" style="z-index: 99999999;"></div>
     <script>
-        $(function(){ $("#footer").load("footer.html"); });
-</script>
-    <!--FOOTER AREA-------------------------------->
+        $(function () {
+            $("#footer").load("templates/footer.html");
+        });
+    </script>
+    <!--Footer----------------------->
 
 
     <script>
         /* TWITCH STREAM PLAYER */
         var options = {
             width: 854,
-            height: 400,
+            height: 480,
             channel: "monstercat",
-            theme: "dark"
+            theme: "dark",
         };
-        var embed = new Twitch.Player("stream", options);
+        var embed = new Twitch.Embed("stream", options);
         function changeChannel(channel) {
             embed.setChannel(channel);
         }

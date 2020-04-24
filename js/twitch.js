@@ -1,9 +1,8 @@
 function updateStreams() {
-    //todo
-    //var streams = ["monstercat", "moondye7", "handiofiblood"];
-    //for (let i = 0; i < streams.length; i++) {
-    //   getTwitchChannelStatus(streams[i]);
-    //}
+    var streams = ["monstercat", "handiofiblood", "meddontv"];
+    for (let i = 0; i < streams.length; i++) {
+       getTwitchChannelStatus(streams[i]);
+    }
 }
 
 function getTwitchChannelStatus(channel) {
@@ -29,13 +28,13 @@ function getTwitchChannelStatus(channel) {
                 live = objChannel.data[0].type;
                 viewers = objChannel.data[0].viewer_count;
             }
-            var element = document.getElementById(channel + "_icon");
+            var element = document.getElementById(channel);
             if (live === 'live') {
                 element.classList.add("online");
                 element.innerHTML = viewers;
             } else {
                 element.classList.remove("online");
-                element.innerHTML = "";
+                element.innerHTML = "offline";
             }
         }
     })

@@ -191,5 +191,15 @@ content>kacheln>kachel>img{}
   height: 100%;
 }
 
+.button.streamButton.online {
+  border-color: green;
+  color: green;
+}
+
+.button.streamButton.online:hover{
+  color: white;
+  background-color: green;
+}
+
 
 
