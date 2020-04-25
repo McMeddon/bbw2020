@@ -175,11 +175,11 @@
 <div>
     <!--Tab bars-->
     <!-- Tab links -->
-    <div class="tab">
-       <button class="tablinks" onclick="openTab(event, 'Monstercat');      changeChannel('monstercat');"><div class="liveicon online"></div>Monstercat </button> 
-       <button class="tablinks" onclick="openTab(event, 'meddontv');        changeChannel('meddontv');" ><div class="liveicon offline"></div>Meddon</button>
-       <button class="tablinks" onclick="openTab(event, 'esl_csgo');        changeChannel('esl_csgo');" ><div class="liveicon offline"></div>esl_csgo</button>
-       <button class="tablinks" onclick="openTab(event, 'kantalupi1909');   changeChannel('kantalupi1909');" ><div class="liveicon offline"></div>kantalupi1909</button>
+    <div class="tab handy">
+       <button class="tablinks streamButton" onclick="openTab(event, 'Monstercat');      changeChannel('monstercat');"><div class="liveicon "></div>Monstercat </button> 
+       <button class="tablinks streamButton" onclick="openTab(event, 'meddontv');        changeChannel('meddontv');" ><div class="liveicon "></div>Meddon</button>
+       <button class="tablinks streamButton" onclick="openTab(event, 'esl_csgo');        changeChannel('esl_csgo');" ><div class="liveicon "></div>esl_csgo</button>
+       <button class="tablinks streamButton" onclick="openTab(event, 'kantalupi1909');   changeChannel('kantalupi1909');" ><div class="liveicon"></div>kantalupi1909</button>
    </div>
 </div>
 <kacheln class="two-column">
@@ -187,10 +187,10 @@
         <!--stream player--> 
         <div id="stream" class="twitch-player fullwidth fullheight"> </div> 
     </kachel>
-    <kachel class="streamcontent ">
+    <kachel class="" style="max-width: 300px; ">
         <!--Tab bars-->
          <!-- Tab links -->
-         <div class="tab">
+         <div class="tab desktop">
             <button class="tablinks" onclick="openTab(event, 'Monstercat');      changeChannel('monstercat');"><div class="liveicon online"></div>Monstercat </button> 
             <button class="tablinks" onclick="openTab(event, 'meddontv');        changeChannel('meddontv');" ><div class="liveicon offline"></div>Meddon</button>
             <button class="tablinks" onclick="openTab(event, 'esl_csgo');        changeChannel('esl_csgo');" ><div class="liveicon offline"></div>esl_csgo</button>
@@ -210,6 +210,11 @@
         </div>
         
         <div id="esl_csgo" class="tabcontent">
+            <h3>esl_csgo</h3>
+            <p>kommt nicht aus Japan aber dafür auch nicht aus dem Ruhepott.</p>
+            <zuschauer id="zuschauer"></zuschauer>
+        </div> 
+        <div id="kantalupi1909" class="tabcontent">
             <h3>esl_csgo</h3>
             <p>kommt nicht aus Japan aber dafür auch nicht aus dem Ruhepott.</p>
             <zuschauer id="zuschauer"></zuschauer>
