@@ -98,8 +98,8 @@
         <div class="streamcontent">
            <!--stream player--> 
        <!--     <div id="stream" class="twitch-player "> </div>  -->
-          <!--streamer
-           <kachel class="vertical-scrollmenu">
+          <!--streamer-->
+           <kachel class="">
                 <ul id="streamlist" class="streamlist">
                     <li id="handiofiblood" class="streamlistitem">
                         <img 
@@ -171,16 +171,27 @@
         </div>
 <div>
 
-</div>-->
+</div>
 <div>
     <!--Tab bars-->
-    <!-- Tab links -->
-    <div class="tab handy">
-       <button class="tablinks streamButton" onclick="openTab(event, 'Monstercat');      changeChannel('monstercat');"><div class="liveicon "></div>Monstercat </button> 
-       <button class="tablinks streamButton" onclick="openTab(event, 'meddontv');        changeChannel('meddontv');" ><div class="liveicon "></div>Meddon</button>
-       <button class="tablinks streamButton" onclick="openTab(event, 'esl_csgo');        changeChannel('esl_csgo');" ><div class="liveicon "></div>esl_csgo</button>
-       <button class="tablinks streamButton" onclick="openTab(event, 'kantalupi1909');   changeChannel('kantalupi1909');" ><div class="liveicon"></div>kantalupi1909</button>
+    <!-- tabs 
+    <div class="tab">
+       <button class="tablinks" onclick="openTab(event, 'Monstercat');      changeChannel('monstercat');"><div class="liveicon online"></div>Monstercat </button> 
+       <button class="tablinks" onclick="openTab(event, 'meddontv');        changeChannel('meddontv');" ><div class="liveicon offline"></div>Meddon</button>
+       <button class="tablinks" onclick="openTab(event, 'esl_csgo');        changeChannel('esl_csgo');" ><div class="liveicon offline"></div>esl_csgo</button>
+       <button class="tablinks" onclick="openTab(event, 'kantalupi1909');   changeChannel('kantalupi1909');" ><div class="liveicon offline"></div>kantalupi1909</button>
    </div>
+</div>-->
+
+ <!-- so das entresultat -->
+<div>
+    <ul id="streamlist" class="tab streamlist">
+        <li><button class="tablinks streamlistitem" id="monstercat"    onclick="openTab(event, 'Monstercat');      changeChannel('monstercat');">     <div class="liveicon online"></div>Monstercat </button>  </li>
+        <li><button class="tablinks streamlistitem" id="meddontv"      onclick="openTab(event, 'meddontv');        changeChannel('meddontv');" >      <div class="liveicon offline"></div>Meddon</button> </li>
+        <li><button class="tablinks streamlistitem" id="esl_csgo"      onclick="openTab(event, 'esl_csgo');        changeChannel('esl_csgo');" >      <div class="liveicon offline"></div>esl_csgo</button> </li>
+        <li><button class="tablinks streamlistitem" id="kantalupi1909" onclick="openTab(event, 'kantalupi1909');   changeChannel('kantalupi1909');">  <div class="liveicon offline"></div>kantalupi1909</button> </li>
+</ul>    
+
 </div>
 <kacheln class="two-column">
     <kachel class="streamcontent">
@@ -190,12 +201,15 @@
     <kachel class="" style="max-width: 300px; ">
         <!--Tab bars-->
          <!-- Tab links -->
-         <div class="tab desktop">
-            <button class="tablinks" onclick="openTab(event, 'Monstercat');      changeChannel('monstercat');"><div class="liveicon online"></div>Monstercat </button> 
-            <button class="tablinks" onclick="openTab(event, 'meddontv');        changeChannel('meddontv');" ><div class="liveicon offline"></div>Meddon</button>
-            <button class="tablinks" onclick="openTab(event, 'esl_csgo');        changeChannel('esl_csgo');" ><div class="liveicon offline"></div>esl_csgo</button>
-            <button class="tablinks" onclick="openTab(event, 'kantalupi1909');   changeChannel('kantalupi1909');" ><div class="liveicon offline"></div>kantalupi1909</button>
-        </div>                
+         <div>
+            <ul id="streamlist" class="tab streamlist">
+                <li><button class="tablinks streamlistitem" id="monstercat"    onclick="openTab(event, 'Monstercat');      changeChannel('monstercat');">     <div class="liveicon "></div>Monstercat </button>  </li>
+                <li><button class="tablinks streamlistitem" id="meddontv"      onclick="openTab(event, 'meddontv');        changeChannel('meddontv');" >      <div class="liveicon "></div>Meddon</button> </li>
+                <li><button class="tablinks streamlistitem" id="esl_csgo"      onclick="openTab(event, 'esl_csgo');        changeChannel('esl_csgo');" >      <div class="liveicon "></div>esl_csgo</button> </li>
+                <li><button class="tablinks streamlistitem" id="kantalupi1909" onclick="openTab(event, 'kantalupi1909');   changeChannel('kantalupi1909');">  <div class="liveicon "></div>kantalupi1909</button> </li>
+        </ul>    
+        
+        </div>              
         <!-- Tab content -->
         <div id="Monstercat" class="tabcontent">
             <h3>Monstercat</h3>
@@ -210,11 +224,6 @@
         </div>
         
         <div id="esl_csgo" class="tabcontent">
-            <h3>esl_csgo</h3>
-            <p>kommt nicht aus Japan aber dafür auch nicht aus dem Ruhepott.</p>
-            <zuschauer id="zuschauer"></zuschauer>
-        </div> 
-        <div id="kantalupi1909" class="tabcontent">
             <h3>esl_csgo</h3>
             <p>kommt nicht aus Japan aber dafür auch nicht aus dem Ruhepott.</p>
             <zuschauer id="zuschauer"></zuschauer>

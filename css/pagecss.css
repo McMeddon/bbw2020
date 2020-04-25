@@ -75,6 +75,7 @@ content>fliestext{ margin-left: 5%;}
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  
   min-height: var(--nav-size);
   border-bottom: 1px solid var(--halfwhite);
+  grid-gap:2px ;
 }
 @media screen and (max-width:800px){
   grid-template-columns: repeat(auto-fit, minmax(100%, min-content));
@@ -89,22 +90,27 @@ content>fliestext{ margin-left: 5%;}
 } */
 
 /* Style the buttons that are used to open the tab content */
-.tab button {
+.tab button, .tab li button {
   border: none;
   cursor: pointer;
   transition: 0.3s;
   max-height: var(--nav-size);
+  min-height: var(--nav-size);
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+.tab button:hover, .tab li button:hover {
   color: var(--txt-light);
   background-color: var(--bg);
-}
+  filter: contrast(110%);
+ }
 
 /* Create an active/current tablink class */
-.tab button.active,.tab button.focus {
- 
+.tab button.active,.tab button.focus, .tab li button.active,.tab li button.focus
+ { 
   border-radius: 4px 4px 0px 0px;
   margin-bottom: 0;
   border-bottom: none;
@@ -233,8 +239,8 @@ content>kacheln>kachel>img{}
   height: calc(var(--nav-size)/3);
   position: relative;float: left;
   border-radius: 100%;
-  top: -3px;
-  left: 20px;
+  top: 0px;
+  left: px;
 }
 .liveicon.offline{ background-color: red;}              /* liveicon subclass*/
 .liveicon.online{ background-color: var(--online-green);} /* liveicon subclass*/

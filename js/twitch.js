@@ -70,17 +70,16 @@ function getTwitchChannelStatus(channel) {
                 viewers = objChannel.data[0].viewer_count;
             }
             //get listitem
-            //chris orginal var list_element = document.getElementById(channel);
-            var tablinks = document.getElementById(tablinks);
+            var list_element = document.getElementById(channel);
             //get corresponding button
-              //chris orginal button var list_button = list_element.getElementsByTagName("button")[0];
-            var tablinks = element.getElementsByClassName("liveicon")[0]; 
+            var list_button = list_element.getElementsByTagName("button")[0];
+
             if (live === 'live') {
-                list_element.classList.add("online");
-                list_button.innerHTML = viewers;
+                tablinks.classList.add("online");
+                tablinks.innerHTML = viewers;
             } else {
                 list_element.classList.remove("online");
-                list_button.innerHTML = "offline";
+                tablinks.innerHTML = "offline";
             } 
         }
     })
