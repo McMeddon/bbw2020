@@ -65,6 +65,60 @@ content>fliestext{
 content>fliestext{ margin-left: 5%;}
 }
 
+/* [1] Tabbars
+/*--------------------------------------------------------------*/
+
+ /* Style the tab */
+ .tab {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  
+  min-height: var(--nav-size);
+  border-bottom: 1px solid var(--halfwhite);
+}
+@media screen and (max-width:800px){
+  grid-template-columns: repeat(auto-fit, minmax(100%, min-content));
+}
+ /* .tab {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, min-content));
+  grid-template-rows: repeat(auto-fit, minmax(200px, min-content));
+  min-height: var(--nav-size);
+  border-bottom: 1px solid var(--halfwhite);
+} */
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  max-height: var(--nav-size);
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  color: var(--txt-light);
+  background-color: var(--bg);
+}
+
+/* Create an active/current tablink class */
+.tab button.active,.tab button.focus {
+ 
+  border-radius: 4px 4px 0px 0px;
+  margin-bottom: 0;
+  border-bottom: none;
+  background-color: var(--bg);
+  color: var(--txt-light);
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding:5%;
+    
+} 
+
 /*--------------------------------------------------------------*/
 /* [2] Startseiten styles
 /*--------------------------------------------------------------*/
@@ -173,7 +227,21 @@ content>kacheln>kachel>img{}
 /* [3.1] TwitchStream
 /*--------------------------------------------------------------*/
 
+
+.liveicon {                                             /* liveicon baseclass*/
+  width: calc(var(--nav-size)/3);
+  height: calc(var(--nav-size)/3);
+  position: relative;float: left;
+  border-radius: 100%;
+  top: -3px;
+  left: 20px;
+}
+.liveicon.offline{ background-color: red;}              /* liveicon subclass*/
+.liveicon.online{ background-color: var(--online-green);} /* liveicon subclass*/
+
+
 .vertical-scrollmenu {
+  display:grid;
   overflow: auto;
   white-space: nowrap;
   align-content: center;
@@ -193,9 +261,9 @@ content>kacheln>kachel>img{}
 }
 
 .streamcontent{
-  display: grid;
+  display:grid;
   /*grid-template-columns: max-content min-content;*/
-  grid-template-rows: auto min-content;
+  /* grid-template-rows: auto min-content; */ /*hight bugs mit den stream button heights*/
 }
 
 .twitch-player iframe {
@@ -204,14 +272,16 @@ content>kacheln>kachel>img{}
 }
 
 .streamlistitem.online .button.streamButton {
-  background-color: transparent;
-  border-color: green;
-  color: green;
+  background-color: var(--transparent);
+  border-color: var(--online-green);
+  color: var(--txt-light);
+  font-weight: 700;
+  
 }
 
 .streamlistitem.online .button.streamButton:hover{
-  color: white;
-  background-color: green;
+  color: var(--txt-light);
+  background-color: var(--online-green);
 }
 
 

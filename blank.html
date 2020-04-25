@@ -68,7 +68,7 @@
     <script> $(function () { $("#footer").load("templates/footer.html"); });</script>
 
     <!--END SCRIPTS---------------------------------------------------->
-
+    <script src="js/tab.js"></script>
 </head>
 
 <body>
@@ -81,6 +81,32 @@
 
     <!--Content----------------------->
     <content>
+        <!--Tab bars-->
+         <!-- Tab links -->
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'Monstercat')"><div class="liveicon online"></div>Monstercat </button> 
+                <button class="tablinks" onclick="openTab(event, 'meddontv')" ><div class="liveicon offline"></div>Meddon</button>
+                <button class="tablinks" onclick="openTab(event, 'esl_csgo')" ><div class="live"></div>esl_csgo</button>
+            </div>
+            
+            <!-- Tab content -->
+            <div id="Monstercat" class="tabcontent">
+                <h3>Monstercat</h3>
+                <p>London is the capital city of England.</p>
+                <button class="button buttontransparent streambutton" id="Monstercat">Zuschauer</button>
+            </div>
+            
+            <div id="meddontv" class="tabcontent">
+                <h3>Paris</h3>
+                <p>Paris is the capital of France.</p>
+            </div>
+            
+            <div id="esl_csgo" class="tabcontent">
+                <h3>Tokyo</h3>
+                <p>Tokyo is the capital of Japan.</p>
+            </div> 
+
+         <!-- Tab links -->
         <fliestext>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
             dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
@@ -109,10 +135,7 @@
 
         </fliestext>
         <!--fresher content----------------------->
-        <freshcontent>
-
-
-        </freshcontent>
+        <freshcontent>        </freshcontent>
         <div style="margin-top:5em; margin-bottom:5em; ">
             <h2>Button Styles</h2>
             <!--Button Styles-------------------------------->
