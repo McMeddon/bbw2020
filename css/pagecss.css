@@ -77,9 +77,8 @@ content>fliestext{ margin-left: 5%;}
   border-bottom: 1px solid var(--halfwhite);
   grid-gap:2px ;
 }
-@media screen and (max-width:800px){
-  grid-template-columns: repeat(auto-fit, minmax(100%, min-content));
-}
+@media screen and (max-width:800px){ grid-template-columns: repeat(auto-fit, minmax(100%, min-content));}
+
  /* .tab {
   overflow: hidden;
   display: grid;

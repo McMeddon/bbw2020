@@ -1,29 +1,25 @@
 name: CI
 
 on:
-    push:
-      branches:
-      - master
-      - release/*
+  push:
+    branches:
+    - master
+    - release/*
 
 jobs:
-    firebase-deploy:
+  firebase-deploy:
 
     runs-on: ubuntu-latest
 
     steps:
-        - uses: actions/checkout@master
-        - uses: actions/setup-node@master
-          with:
-          node-version: '10.x'
-        - run: npm install
-        - run: npm run build:prod
-        - uses: w9jds/firebase-action@master
-          with:
-            args: deploy --only hosting
-          env:
-            FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-
-            - name: GitHub Action for Firebase
-            uses: w9jds/firebase-action@v1.3.0
-          
+    - uses: actions/checkout@firebase
+    - uses: actions/setup-node@firebase
+      with:
+        node-version: '10.x'
+    - run: npm install
+    - run: npm run build:prod
+    - uses: w9jds/firebase-action@master
+      with:
+        args: deploy --only hosting
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
