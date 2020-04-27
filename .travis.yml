@@ -1,5 +1,5 @@
 script:
 - echo "Deploying"
 after_success:
-    - firebase deploy --token $FIREBASE_TOKEN
+    - firebase deploy --bbw2020-fe79b --token $FIREBASE_TOKEN
         
