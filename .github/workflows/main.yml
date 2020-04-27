@@ -2,14 +2,12 @@ name: CI
 
 on:
   push:
-    branches:
-    - master
-    - release/*
+    branches: [ master ]
 
 jobs:
   firebase-deploy:
 
-    runs-on: ubuntu-latest
+    runs-on: [ ubuntu-latest ]
 
     steps:
     - uses: actions/checkout@master
