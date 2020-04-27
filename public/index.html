@@ -3,6 +3,18 @@
 
 <head id="header">
     
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.14.2/firebase-app.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+    <script src="/__/firebase/7.14.2/firebase-analytics.js"></script>
+    
+    <meta name="google-site-verification" content="ghOyzRlVeafqGR6rcUBB_McSByjoAZ0VLSSvVgLNe78">
+    
 
     <!--META----------------------------------------------------------->
     <title>Bladebrothers Gaming Community</title>
@@ -77,59 +89,241 @@
     <script> $(function () { $("#footer").load("templates/footer.html"); });</script>
 
     <!--END SCRIPTS---------------------------------------------------->
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
 
 </head>
 
-
+<body>
     <!--Menu----------------------->
     <div id="nav-placeholder"></div>
     <!--Content----------------------->
+    <content class="">
+        </mainframe>
+        </herobanner>
 
-  <body>
-    <div id="message">
-      <h2>Jawollo, der Lachs ist gebuttert! Die Jauche ist am würzen!</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>"You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!"</p>
-      <h3>Niceee</h3>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+        <herobanner class="">
+            <mainframe class="animated fadeIn faster fullheight ">
+                <video autoplay muted loop id="myVideo" class="">
+                    <source src="./video/3.mp4" type="video/mp4" defer>
+                </video>
+                <h1 class="herobannerH1 animated fadeIn fast delay-1s" style="margin: 0; padding: 0; line-height: 1; font-family:Satisfy; letter-spacing: 1px;">
+                    BladeBrothers</h1>
+                <hr class="animated fadeIn slow delay-1s">
+                <h2 class="animated fadeIn slower delay-1s"> Gaming Community since 2010</h2>
+                <!--  <img class="lazy" loading="lazy" alt="bladebros" src="./images/svg/chevron.svg" heigth="50px" width="50px" style="filter:invert();"
+                    class="animated fadeIn slower "> -->
+            </mainframe>
+        </herobanner>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        <kacheln>
+            <kachel class=" denied" style="z-index: 9;">
+                <a href="./join">
+                    <img 
+                        class="lazy" 
+                        loading="lazy" 
+                        alt="bladebros" 
+                        src="./images/svg/bblogored.png" 
+                        data-src="./images/svg/bblogored.png" 
+                        width="25%"
+                    >
+                    <h3>Mitglied werden</h3>
+                    <p>Finde hier alle Mitglieder von Bladebrothers</p>
+                </a>
+            </kachel>
+        </kacheln>
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+        <kacheln>
+            <kachel style="background-image: url();" class="card-wide hover">
+                <a href="./events.html" target="_blank">
+                    <h3>Events</h3>
+                    <p>Finde hier alle Mitglieder von Bladebrothers</p>
+                </a>
+            </kachel>
+
+            <kachel style="background-image: url();" class=" hover">
+                <a href="https://steamcommunity.com/groups/BladeBrothers" target="_blank" rel="noreferrer">
+                    <img 
+                        class="lazy" 
+                        loading="lazy" 
+                        alt="bladebros" 
+                        src="./images/svg/Steam.svg"    
+                        data-src="./images/svg/Steam.svg"    
+                        width="25%"
+                        >
+                    <h3>Steam Gruppe</h3>
+                    <p>Der direkte Link zu allen Mates aus der Gruppe zum schnellen Einstieg</p>
+                </a>
+            </kachel>
+
+
+        </kacheln>
+
+        <kacheln>
+            <kachel style="background-image: url();" class="hover">
+                <a href="">
+                    <h3>Shop</h3>
+                    <h3> Wohlstands-<u>Merch</u></h3>
+                </a>
+            </kachel>
+            <kachel style="background-image: url();" class="hover">
+                <a href="">
+                    <img 
+                        class="lazy" 
+                        loading="lazy" 
+                        alt="bladebros" 
+                        src="./images/svg/discord.svg" 
+                        data-src="./images/svg/discord.svg" 
+                        width="25%"
+                    >
+                    <h3>Discord</h3>
+                    <p>Jetzt beitreten</p>
+                </a>
+            </kachel>
+
+            <kachel style="background-image: url();" class="hover">
+                <a>
+                    <img 
+                        class="lazy" 
+                        loading="lazy" 
+                        alt="bladebros" 
+                        src="./images/svg/bblogogold.png" 
+                        data-src="./images/svg/bblogogold.png" 
+                        width="25%"
+                        >
+                    <h3>BladeBros Gold</h3>
+                    <p>Von vielen für Alle, zum Unterstützen der Community</p>
+                </a>
+            </kachel>
+        </kacheln>
+
+
+
+        <!--live----------------------->
+        <h2 class="frontpageh2">
+            <center>Immerwieder <i style="color:red !important; font-weight: 400 !important;"> •live</i> zu verfolgen
+            </center>
+        </h2>
+        <div id="live">
+            <div class="creator">
+                <a href="/streams?stream=?monstercat">
+                    <img 
+                        alt="bladebros" 
+                        src="./images/events.PNG"
+                        data-src="./images/events.png"
+                        width="150px"
+                        height="150px"
+                        class="lazy" 
+                        loading="lazy" 
+                        >
+                    <h3>Kantalupi</h3>
+                    <button class="hover button buttontransparent">Ansehen</button>
+                </a>
+            </div>
+            <creator class="creator">
+                <a href="/streams?stream=?meddontv">
+                    <img 
+                        alt="bladebros" 
+                        src="./images/kanta.PNG"
+                        data-src="./images/kanta.PNG"
+                        width="150px"
+                        height="150px"
+                        class="lazy" 
+                        loading="lazy" 
+                        >
+                    <h3>Meddon</h3>
+                    <button class="hover button buttontransparent">Ansehen</button>
+                </a>
+            </creator>
+
+            <creator class="creator">
+                <a href="/streams?stream=handiofiblood">
+                    <img 
+                    alt="bladebros" 
+                    src="./images/devicesillustration.PNG"
+                    data-src="./images/devicesillustration.png"
+                    width="150px"
+                    height="150px"
+                    class="lazy" 
+                    loading="lazy" 
+                    >
+                    <h3>Energizer</h3>
+                    <button class="hover button buttontransparent">Ansehen</button>
+                </a>
+            </creator>
+
+            <creator class="creator">
+                <a href="./streams">
+                    <img 
+                        width="150px"
+                        height="150px"
+                        class="lazy" 
+                        loading="lazy" 
+                        alt="bladebros" 
+                        src="./images/svg/bell.svg"
+                        data-src="./images/svg/bell.svg"
+                        >
+                    <h3>Valeneros</h3>
+                    <button class="hover button buttontransparent">Ansehen</button>
+                </a>
+            </creator>
+        </div>
+
+    <kacheln class=" floatcenter" >     
+
+        <kachel class="">
+            
+            <img 
+            alt="Bladebrothers logo"
+            src="images/svg/bell.svg"
+            data-src="images/svg/bell.svg"
+            loading="lazy"
+            class="floatcenter"
+            width="150px"
+            height="150px"
+            >
+            <content>
+                <h2 class="frontpageh2">Content Creator? </h2>
+                <br><p> <b>Wir Unterstützen dabei!</b></p><br>
+                <p class=""> Bei BladeBrothers unterstützen wir alle die leidenschaftlich content kreieren, videos produzieren oder einfach livestreamen.</p>
+
+                 <br>
+                 <br>
+                 <br>
+             </content>
+        </kachel> 
+        
+        <img 
+        alt="Bladebrothers logo"
+        src="images/svg/bblogo.png"
+        data-src="images/svg/bblogo.png"
+        loading="lazy"
+        class="lazy desktop"
+        >
+        <kachel class="">
+            
+            <content>
+                <h2 class="frontpageh2">Was & Wer ist BladeBrothers?</h2>
+                <br><p class=""> Bladebrothers ist eine <b><u>Gaming Community</u></b>. <br><br>  Gemeinsam Wochenenden, Abende und Tage Online in Wettkämpfen, Survival Abenteueren und mehr bestreiten. Wir heißen alle entspannten Gemüter, Willkommen in unserer Gemeinschaft.                 Hier du alle Informationen, zu Servern, wer Stream oder dir helfen kann.</p>
+
+                 <br>
+                 <br>
+                 <br>
+                <button class="button hover buttoncolored" onclick="location.href='./join'">Beitreten</button>
+            </content>
+        </kachel>
+    </kacheln>
+
+
+    <kacheln class=" floatcenter" >     
+       
+        
+    </kacheln>
+        <!--fresher content----------------------->
+        <freshcontent>
+
+        </freshcontent>
+    </content>
+
+        <!--footer----------------------->
+        <div id="footer"></div>
+    </body>
 </html>
