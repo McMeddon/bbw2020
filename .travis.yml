@@ -1,14 +1,15 @@
 language: node_js
 node_js:
-    - "10"
+    - "12"
+branches:
+    only:
+        - master
+
+before_script:
+    -npm install -g firebase-tools
+
 script:
     - echo "Neue Runde neues Glück! Deploying!"
 after_success:
-    - firebase deploy --bbw2020-fe79b --token $FIREBASE_TOKEN
-    
-    deploy:
-        provider: firebase
-        token:
-          secure: $FIREBASE_TOKEN
-        project: "bbw2020-fe79b"
-        message: "travis Deploying "
+    - firebase deploy --token $FIREBASE_TOKEN --bbw2020-fe79b --non-interactive
+
