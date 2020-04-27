@@ -9,7 +9,8 @@ before_script:
     - npm install -g firebase-tools
 
 script:
+    - firebase deploy --token $FIREBASE_TOKEN --bbw2020-fe79b --only-hosting
     - echo "Neue Runde neues Glück! Deploying!"
 after_success:
-    - firebase deploy --token $FIREBASE_TOKEN --bbw2020-fe79b --non-interactive
+    message: "jawollo!"
 
