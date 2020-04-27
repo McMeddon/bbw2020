@@ -6,13 +6,13 @@ before_script:
   - npm install firebase-tools -g
 
 script:
-  - firebase deploy --only hosting --token $FIREBASE_TOKEN --bbw2020-fe79b --only-hosting
-  - echo "Neue Runde neues Glück! Deploying!"
+    - echo "Neue Runde neues Glück! Deploying!"
+    
 
 branches:
   only:
     - master
 
 after_success:
-
+    - firebase deploy --only hosting --token $FIREBASE_TOKEN --bbw2020-fe79b --only-hosting
 
