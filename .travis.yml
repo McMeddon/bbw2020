@@ -14,5 +14,5 @@ branches:
     - master
 
 after_success:
-    - firebase deploy --only hosting --token $FIREBASE_TOKEN --bbw2020-fe79b --only-hosting
+
 
