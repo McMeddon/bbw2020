@@ -18,30 +18,37 @@ function getUrlVars() {
 
 function updateStreams() {
     var ul = document.getElementById('streamlist')
-   
-    for(let i = ul.childNodes.length; i--;){
-        if(ul.childNodes[i].nodeName === 'LI')
+
+    for (let i = ul.childNodes.length; i--;) {
+        if (ul.childNodes[i].nodeName === 'LI')
             getTwitchChannelStatus(ul.childNodes[i].id);
     }
     orderStreams(ul);
 }
 
-function orderStreams(ul){
+function toggleOnline(el, live) {
+    if ((el.classList.contains('offline') && live) || (el.classList.contains('online') && !live)) {
+        el.classList.toggle('online');
+        el.classList.toggle('offline');
+    }
+}
+
+function orderStreams(ul) {
     var new_ul = ul.cloneNode(false);
 
     var lis = [];
-    for(let i = ul.childNodes.length; i--;){
-        if(ul.childNodes[i].nodeName === 'LI')
-            if(ul.childNodes[i].classList.contains('online'))
+    for (let i = ul.childNodes.length; i--;) {
+        if (ul.childNodes[i].nodeName === 'LI')
+            if (ul.childNodes[i].classList.contains('online'))
                 lis.push(ul.childNodes[i]);
     }
-    for(let i = ul.childNodes.length; i--;){
-        if(ul.childNodes[i].nodeName === 'LI')
-            if(!ul.childNodes[i].classList.contains('online'))
+    for (let i = ul.childNodes.length; i--;) {
+        if (ul.childNodes[i].nodeName === 'LI')
+            if (!ul.childNodes[i].classList.contains('online'))
                 lis.push(ul.childNodes[i]);
     }
 
-    for(let i = 0; i < lis.length; i++)
+    for (let i = 0; i < lis.length; i++)
         new_ul.appendChild(lis[i]);
     ul.parentNode.replaceChild(new_ul, ul);
 }
@@ -71,16 +78,7 @@ function getTwitchChannelStatus(channel) {
             }
             //get listitem
             var list_element = document.getElementById(channel);
-            //get corresponding button
-            var list_button = list_element.getElementsByTagName("button")[0];
-
-            if (live === 'live') {
-                tablinks.classList.add("online");
-                tablinks.innerHTML = viewers;
-            } else {
-                list_element.classList.remove("online");
-                tablinks.innerHTML = "offline";
-            } 
+            toggleOnline(list_element,live);
         }
     })
 }

@@ -241,9 +241,12 @@ content>kacheln>kachel>img{}
   top: 0px;
   left: px;
 }
-.liveicon.offline{ background-color: red;}              /* liveicon subclass*/
-.liveicon.online{ background-color: var(--online-green);} /* liveicon subclass*/
+.streamlistitem.offline .liveicon{ background-color: red;}              /* liveicon subclass*/
+.streamlistitem.online .liveicon{ background-color: var(--online-green);} /* liveicon subclass*/
 
+.streamlistitem {
+  width:100%;
+}
 
 .vertical-scrollmenu {
   display:grid;
@@ -266,27 +269,12 @@ content>kacheln>kachel>img{}
 }
 
 .streamcontent{
-  display:grid;
-  /*grid-template-columns: max-content min-content;*/
-  /* grid-template-rows: auto min-content; */ /*hight bugs mit den stream button heights*/
+  display:contents;
 }
 
 .twitch-player iframe {
   width: 100%;
   height: 100%;
-}
-
-.streamlistitem.online .button.streamButton {
-  background-color: var(--transparent);
-  border-color: var(--online-green);
-  color: var(--txt-light);
-  font-weight: 700;
-  
-}
-
-.streamlistitem.online .button.streamButton:hover{
-  color: var(--txt-light);
-  background-color: var(--online-green);
 }
 
 
