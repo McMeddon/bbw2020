@@ -17,6 +17,7 @@ jobs:
     - run: npm install
     - uses: w9jds/firebase-action@master
       with:
+        args: use bbw2020-fe79b
         args: deploy --only hosting
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
