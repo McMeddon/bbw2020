@@ -23,3 +23,7 @@ jobs:
             args: deploy --only hosting
           env:
             FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+            - name: GitHub Action for Firebase
+            uses: w9jds/firebase-action@v1.3.0
+          
