@@ -4,10 +4,30 @@
   },
   "hosting": {
     "public": "public",
+    "cleanUrls": true,
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/join",
+        "destination": "/join.html"
+      },
+      {
+        "source": "/streams",
+        "destination": "/streams.html"
+      },
+      {
+        "source": "/impressum",
+        "destination": "/impressum.html"
+      }
+
     ]
   }
 }
