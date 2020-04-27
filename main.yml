@@ -1,25 +1,39 @@
-name: CI
-
+name: Build and Deploy
 on:
   push:
     branches:
-    - master
-    - firebase/*
+      - firebase
 
 jobs:
-  firebase-deploy:
-
+  build:
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@firebase
-    - uses: actions/setup-node@firebase
-      with:
-        node-version: '10.x'
-    - run: npm install
-    - run: npm run build:prod
-    - uses: w9jds/firebase-action@firebase
-      with:
-        args: deploy --only hosting
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      - name: Checkout Repo
+        uses: actions/checkout@firebase
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build-prod
+      - name: Archive Production Artifact
+        uses: actions/upload-artifact@firebase
+        with:
+          name: dist
+          path: dist
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@firebase
+      - name: Download Artifact
+        uses: actions/download-artifact@firebase
+        with:
+          name: dist
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@firebase
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
