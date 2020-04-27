@@ -14,5 +14,5 @@ branches:
     - master
 
 after_success:
-    message: "jawollo!"
+
 
