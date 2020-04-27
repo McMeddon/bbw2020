@@ -1,5 +1,8 @@
+language: node_js
+node_js:
+    - "4.0"
 script:
-- echo "Deploying"
+    - echo "Neue Runde neues Glück! Deploying!"
 after_success:
     - firebase deploy --bbw2020-fe79b --token $FIREBASE_TOKEN
         
