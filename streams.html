@@ -1,165 +1,257 @@
 <!DOCTYPE html>
 <html lang="de-DE">
-<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
-<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
-<!--[if IE 8]><html class="preIE9"><![endif]-->
-<!--[if gte IE 9]><!-->
-<html>
-<!--<![endif]-->
+  <!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+  <!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+  <!--[if IE 8]><html class="preIE9"><![endif]-->
+  <!--[if gte IE 9]><!-->
+  <html>
+    <!--<![endif]-->
 
+    <head>
+      <!--META----------------------------------------------------------->
+      <title>Bladebrothers Gaming Community</title>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <meta description="BladeBrothers Gaming Home" />
+      <meta name="theme-color" content="#222" />
+      <meta name="msapplication-TileColor" content="#222222" />
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+      <meta name="theme-color" content="#222222" />
+      <!--END META------------------------------------------------------->
 
-<head>
-    <!--META----------------------------------------------------------->
-    <title>Bladebrothers Gaming Community</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta description="BladeBrothers Gaming Home">
-    <meta name="theme-color" content="#222">
-    <meta name="msapplication-TileColor" content="#222222">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#222222">
-    <!--END META------------------------------------------------------->
+      <!--STYLES--------------------------------------------------------->
 
-    <!--STYLES--------------------------------------------------------->
+      <!--EXTERNAL-->
+      <link rel="stylesheet" href="./css/alertify.min.css" />
+      <link rel="stylesheet" href="./css/alertify.css" type="text/css" />
+      <link rel="stylesheet" href="./css/themes/default.min.css" />
+      <link rel="stylesheet" href="./animate.css-master/animate.min.css" />
 
-    <!--EXTERNAL-->
-    <link rel="stylesheet" href="./css/alertify.min.css" />
-    <link rel="stylesheet" href="./css/alertify.css" type="text/css">
-    <link rel="stylesheet" href="./css/themes/default.min.css" />
-    <link rel="stylesheet" href="./animate.css-master/animate.min.css">
-
-    <!-- FONTS-->
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
-    <link
+      <!-- FONTS-->
+      <link
+        href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat"
+        rel="stylesheet"
+      />
+      <link
         href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,500;0,600;0,900;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"
+      />
 
-    <!--PAGE STYLE-->
-    <link rel="stylesheet" href="./css/pagecss.css" type="text/css">
-    <link rel="stylesheet" href="./css/mainstyle.css" type="text/css">
+      <!--PAGE STYLE-->
+      <link rel="stylesheet" href="./css/pagecss.css" type="text/css" />
+      <link rel="stylesheet" href="./css/mainstyle.css" type="text/css" />
 
-    <!--FAVICONS-->
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/bblogofavicon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+      <!--FAVICONS-->
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="./images/favicon/bblogofavicon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="96x96"
+        href="./images/favicon/favicon-96x96.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="./images/favicon/favicon-16x16.png"
+      />
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
+      <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+      <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+      <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+      <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+      <link
+        rel="apple-touch-icon"
+        sizes="114x114"
+        href="/apple-icon-114x114.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="120x120"
+        href="/apple-icon-120x120.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="144x144"
+        href="/apple-icon-144x144.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="152x152"
+        href="/apple-icon-152x152.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-icon-180x180.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="192x192"
+        href="/android-icon-192x192.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="96x96"
+        href="/favicon-96x96.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
+      <link rel="manifest" href="/manifest.json" />
 
-    <!--END STYLES----------------------------------------------------->
+      <!--END STYLES----------------------------------------------------->
 
-    <!--SCRIPTS-------------------------------------------------------->
+      <!--SCRIPTS-------------------------------------------------------->
 
-    <!-- alertify -->
-    <script src="./js/lib/alertify.min.js"></script>
-    <!--load function enabler JQuery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
-    <!-- include nav function-->
-    <script> $(function () { $("#nav-placeholder").load("templates/navbar.html"); });</script>
-    <!-- include footer function-->
-    <script> $(function () { $("#footer").load("templates/footer.html"); });</script>
-    <!-- include tab function-->
-    <script src="./js/tab.js"></script>
+      <!-- alertify -->
+      <script src="./js/lib/alertify.min.js"></script>
+      <!--load function enabler JQuery-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
+      <!-- include nav function-->
+      <script>
+        $(function () {
+          $("#nav-placeholder").load("templates/navbar.html");
+        });
+      </script>
+      <!-- include footer function-->
+      <script>
+        $(function () {
+          $("#footer").load("templates/footer.html");
+        });
+      </script>
+      <!-- include tab function-->
+      <script src="./js/tab.js"></script>
 
-    <!--END SCRIPTS---------------------------------------------------->
+      <!--END SCRIPTS---------------------------------------------------->
+    </head>
 
-</head>
+    <body>
+      <!--IMPORTS-------------------->
+      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+      <script src="js/twitch.js"></script>
+      <script>
+        var urlparam = getUrlParam("stream", "monstercat");
+        window.history.replaceState({}, document.title, "/" + "streams");
+      </script>
 
-<body>
-    <!--IMPORTS-------------------->
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-    <script src="js/twitch.js"></script>
-    <script>
-        var urlparam = getUrlParam('stream', 'monstercat')
-        window.history.replaceState({}, document.title, "/" + "streams");    
-    </script>
+      <!--Menu----------------------->
 
-    <!--Menu----------------------->
+      <div id="nav-placeholder" style="z-index: 99999999;"></div>
 
-    <div id="nav-placeholder" style="z-index: 99999999;"></div>
+      <!--Twitch-Player ------------>
 
-    <!--Twitch-Player ------------>
-    
-    <content>
+      <content>
         <kacheln class="two-column">
-            <kachel class="streamcontent">
-                <!--stream player-->
-                <div id="stream" class="twitch-player fullwidth fullheight"> </div>
-            </kachel>
-            <kachel class="" style="max-width: 300px; ">
-                <!--Tab bars-->
-                <!-- Tab links -->
-                <!-- TODO:
+          <kachel class="streamcontent">
+            <!--stream player-->
+            <div id="stream" class="twitch-player fullwidth fullheight"></div>
+          </kachel>
+          <kachel class="" style="max-width: 300px;">
+            <!--Tab bars-->
+            <!-- Tab links -->
+            <!-- TODO:
                     Streamer aus DB laden und Liste generieren ?
                     Tab content aus DB laden?-->
-                <div class="tab desktop">
-                    <ul id="streamlist" class=" streamlist">
-                        <li id="monstercat" class="streamlistitem offline">
-                            <button class="tablinks"
-                                onclick="openTab(event, 'Monstercat','London is the capital city of England.');      changeChannel('monstercat');">
-                                <div class="liveicon"></div>Monstercat
-                            </button> </li>
-                        <li id="meddontv" class="streamlistitem offline"><button class="tablinks streamlistitem"
-                                onclick="openTab(event, 'Meddontv','Meddon ist auch eine Stadt des Herzens');        changeChannel('meddontv');">
-                                <div class="liveicon"></div>Meddon
-                            </button> </li>
-                        <li id="esl_csgo" class="streamlistitem offline"><button class="tablinks streamlistitem"
-                                onclick="openTab(event, 'Esl_csgo','kommt nicht aus Japan aber dafür auch nicht aus dem Ruhepott.');        changeChannel('esl_csgo');">
-                                <div class="liveicon"></div>esl_csgo
-                            </button> </li>
-                        <li id="kantalupi1909" class="streamlistitem offline"><button class="tablinks streamlistitem"
-                                onclick="openTab(event,'Kanta','this is a test description');   changeChannel('kantalupi1909');">
-                                <div class="liveicon"></div>kantalupi1909
-                            </button> </li>
-                    </ul>
-
-                </div>
-                <!-- Tab content -->
-                <div id="basicTab" class="tabcontent">
-                    <h3 id="basicTabTitle"></h3>
-                    <p id="basicTabDescription"></p>
-                    <zuschauer id="zuschauer"></zuschauer>
-                </div>
-            </kachel>
+            <div class="tab desktop">
+              <ul id="streamlist" class="streamlist">
+                <li id="monstercat" class="streamlistitem offline">
+                  <button
+                    class="tablinks streamlistitem button"
+                    onclick="
+                        openTab(event, 'Monstercat','London is the capital city of England.');      
+                        changeChannel('monstercat');
+                        ">
+                    <div class="liveicon"></div>
+                    Monstercat
+                  </button>
+                </li>
+                <li id="meddontv" class="streamlistitem offline">
+                  <button
+                    class="tablinks streamlistitem button"
+                    onclick="
+                        openTab(event, 'Meddontv','Meddon ist auch eine Stadt des Herzens');        
+                        changeChannel('meddontv');
+                         ">
+                    <div class="liveicon"></div>
+                    Meddon
+                  </button>
+                </li>
+                <li id="esl_csgo" class="streamlistitem offline">
+                  <button
+                    class="tablinks streamlistitem button"
+                    onclick="
+                        openTab(event, 'Esl_csgo','kommt nicht aus Japan aber dafür auch nicht aus dem Ruhepott.');        
+                        changeChannel('esl_csgo');
+                        ">
+                    <div class="liveicon"></div>
+                    esl_csgo
+                  </button>
+                </li>
+                <li id="kantalupi1909" class="streamlistitem offline">
+                  <button
+                    class="tablinks streamlistitem button"
+                    onclick="
+                        openTab(event,'Kanta','this is a test description');   
+                        changeChannel('kantalupi1909');
+                        ">
+                    <div class="liveicon"></div>
+                    kantalupi1909
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <!-- Tab content -->
+            <div id="basicTab" class="tabcontent">
+              <h3 id="basicTabTitle"></h3>
+              <p id="basicTabDescription"></p>
+              <zuschauer id="zuschauer"></zuschauer>
+            </div>
+          </kachel>
         </kacheln>
-    
-    </content>
-    <!--Footer----------------------->
-    <div id="footer" style="z-index: 99999999;"></div>
-    <!--Twitch-Player ------------>
-    <script>
+      </content>
+      <!--Footer----------------------->
+      <div id="footer" style="z-index: 99999999;"></div>
+      <!--Twitch-Player ------------>
+      <script>
         /* TWITCH STREAM PLAYER */
         var options = {
-            width: 854,
-            height: 480,
-            channel: urlparam,
-            theme: "dark",
+          width: 854,
+          height: 480,
+          channel: urlparam,
+          theme: "dark",
         };
         var embed = new Twitch.Embed("stream", options);
         function changeChannel(channel) {
-            var player = embed.getPlayer();
-            player.setChannel(channel);
+          var player = embed.getPlayer();
+          player.setChannel(channel);
         }
         /* UPDATE STREAMS STATE ONCE*/
         updateStreams();
         /* SET UPDATE INTERVAL FOR STREAM ON/OFF STATE */
         setInterval(updateStreams, 180000); //3 min
-    </script>
-
-</body>
-
+      </script>
+    </body>
+  </html>
 </html>
