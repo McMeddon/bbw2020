@@ -19,7 +19,6 @@ function openTab(evt, title, desc, tab,) {
     document.getElementById('basicTabTitle').innerText = title;
     document.getElementById('basicTabDescription').innerText =desc;
     document.getElementById('basicTab').style.display = "block";
-    document.getElementById('tab').style.display = "block"; /*still broken*/
     evt.currentTarget.className += " active";
   } 
 
