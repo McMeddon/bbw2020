@@ -108,12 +108,15 @@ content>fliestext{ margin-left: 5%;}
  }
 
 /* Create an active/current tablink class */
-.tab button:active,.tab button:focus, .tab li button:active,.tab li button:focus
+.tab button:active,.tab button:focus, .tab li button:active,.tab li button:focus, .tab li button:-moz-focusring
  { 
+  outline: none;
+  border-color: var(--txt-light);
   border-radius: 4px 4px 0px 0px;
   border-bottom: none;
   background-color: var(--bg);
   color: var(--txt-light) ;
+  filter: contrast(110%);
 }
 
 /* Style the tab content */
