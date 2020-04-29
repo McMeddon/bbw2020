@@ -102,31 +102,28 @@
 
   <content>
     <kacheln class="two-column">
+ <!--Tab bars-->
+      <!--stream player-->
       <kachel class="streamcontent">
-        <!--stream player-->
         <div id="stream" class="twitch-player fullwidth fullheight"></div>
       </kachel>
-      <kachel class="" style="max-width: 300px;">
-        <!--Tab bars-->
-        <div class="tab desktop">
+      
+      <!--Tab bars-->
+      <kachel class="" style="max-width: 260px;">
+        <div class="tab">
           <ul id="streamlist" class="streamlist">
             <!--load from db-->
             <script src="js/twitch.js"></script>
           </ul>
         </div>
         <!-- Streamer Tab content -->
-        <div id="StreamerTab" class="tabcontent">
+        <div id="StreamerTab desktop" class="tabcontent">
           <h3 id="StreamerTabTitle"></h3>
           <!--provisorisch-->
           <p id="StreamerTabDescription"></p>
           <zuschauer>
-            <div>
-              Zuschauer:
-            </div>
-            <div id="StreamerTabViewers">
-              
-            </div>
-
+            <div> Zuschauer: </div>
+            <div id="StreamerTabViewers"></div>
           </zuschauer>
         </div>
       </kachel>
@@ -135,11 +132,5 @@
   <!--Footer----------------------->
   <div id="footer" style="z-index: 99999999;"></div>
 
-
-
-
-</body>
-
-</html>
-
+  </body>
 </html>

@@ -35,7 +35,8 @@
     --bg-accent:#484a4d;
     --nav-size:70px; 
     --border: 1px solid #474a4d ;  
-    --border-radius:8px;
+    --border-radius:6px;
+    --border-spacing:4px;
     --speed: 200ms;
     --font-size:14px;
     --letter-spacing:-0.0415625em;

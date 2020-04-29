@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="de-DE">
 
-
 <head>
     <!--META----------------------------------------------------------->
     <title>Bladebrothers Gaming Community</title>
@@ -117,23 +116,50 @@
             </script>
 
     
-</div> -->
-        
+</div> --> 
+<content>
+    <kacheln>
+        <kachel>basic tabs links  via Argument "einbettung"</kachel>
+    </kacheln>
+</content>
         <!-- Twitch tabs links -->
         <div class="tab basicTab">
-            <button class="tablinks streamlistitem button" onclick="openTab(event, 'Monstercat','London is the capital city of England.');   "><div class="liveicon online"></div>Monstercat </button> 
-            <button class="tablinks basicTabTitle" onclick="openTab(event, 'meddontv')" ><div class="liveicon offline"></div>Meddon</button>
-            <button class="tablinks basicTabTitle" onclick="openTab(event, 'esl_csgo')" ><div class="live"></div>esl_csgo</button>
+            <button class="button tablinks streamlistitem button " onclick="openDynamicTab(event, 'Monstercat','London is the capital city of England.');   "><div class="liveicon online"></div>Monstercat </button> 
+            <button class="button tablinks " onclick="openDynamicTab(event, 'meddontv', 'Heiße Torten jetzt in deiner Umgebung')" ><div class="liveicon offline"></div>Meddon</button>
+            <button class="button tablinks " onclick="openDynamicTab(event, 'esl_csgo')" ><div class="live"></div>esl_csgo</button>
         </div>
-        
-        <!--Normal Tab bars-->
-        <div class="basicTab tab">
-            <button class="tablinks streamlistitem button" onclick="openTab(event, 'Monstercat','London is the capital city of England.')">Monstercat </button> 
-            <button class="tablinks" onclick="openTab(event, 'meddontv')" >Meddon</button>
-            <button class="tablinks" onclick="openTab(event, 'esl_csgo')" >esl_csgo</button>
-        </div>
-        
-        <!-- Tab content -->
+              
+    <!-- Tab new content -->
+        <div id="basicTab" class="tabcontent">
+          <h3 id="basicTabTitle"></h3>
+          <!--provisorisch-->
+          <div id="basicTabDescription"></div>
+            <div>
+                Hier könnte noch mehr an iformation stehen als erwartet
+            </div>
+
+            <kacheln>
+                <kachel>
+                    
+                    <img id="basicTabImage" src="images/svg/bblogored.png" width="100px"/>
+                </kachel>
+            </kacheln>
+        </div> 
+
+        <content>
+            <kacheln>
+                <kachel>W3 tabs links  via <strong>html</strong> "einbettung"</kachel>
+            </kacheln>
+        </content>
+
+ <!--  Normal Tab bars-->
+ <div class="basicTab tab">
+    <button class="tablinks streamlistitem button" onclick="openBasicTab(event, 'Monstercat','London is the capital city of England.')">Monstercat </button> 
+    <button class="tablinks" onclick="openBasicTab(event, 'meddontv')" >Meddon</button>
+    <button class="tablinks" onclick="openBasicTab(event, 'esl_csgo')" >esl_csgo</button>
+</div> 
+
+<!-- Tab content -->
         <div id="Monstercat" class="tabcontent basicTabDescription">
             <h3>Monstercat</h3>
             <p>London is the capital city of England.</p>
