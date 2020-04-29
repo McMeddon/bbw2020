@@ -1,3 +1,4 @@
+/** Deprecated for streams page */
 function openTab(evt, title, desc, tab,) {
     // Declare all variables
     var i, tabcontent, tablinks, tab;
