@@ -58,30 +58,37 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
+    <!-- nicht vorhanden - used for PWA <link rel="manifest" href="/manifest.json"> -->
     
     <!--END STYLES----------------------------------------------------->
-
-    <!--SCRIPTS-------------------------------------------------------->
-    <!-- update the version number as needed -->
+   
+    
+    <!--FIREBASE-------------------------------------------------------->
+        <!-- update the version number as needed -->
+   
+    <!-- <script defer src="./js/firebase.js"></script> -->
     <script defer src="/__/firebase/7.14.2/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.14.2/firebase-auth.js"></script>
+    <!-- <script defer src="/__/firebase/7.14.2/firebase-auth.js"></script> -->
     <script defer src="/__/firebase/7.14.2/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.14.2/firebase-messaging.js"></script>
+    <!-- <script defer src="/__/firebase/7.14.2/firebase-messaging.js"></script> -->
     <script defer src="/__/firebase/7.14.2/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+    <!-- <script defer src="/__/firebase/init.js"></script> -->
+    
+    
+    <!--SCRIPTS-------------------------------------------------------->
+    
     <!-- alertify -->
     <script defer src="./js/lib/alertify.min.js"></script>
     <!--load function enabler JQuery-->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
-    <script defer src="lazysizes.min.js"</script>
+    <!--Original scripttag <script defer src="lazysizes.min.js"></script> -->
+    <script defer src="./node_modules/lazysizes/lazysizes.min.js"></script>
     <!-- include nav function-->
     <script> $(function () { $("#nav-placeholder").load("templates/navbar.html"); });</script>
     <!-- include footer function-->
     <script> $(function () { $("#footer").load("templates/footer.html"); });</script>
-
+    
     <!--END SCRIPTS---------------------------------------------------->
 
 </head>
