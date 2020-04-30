@@ -1,4 +1,4 @@
-const app = new PIXI.Application({ backgroundColor: 0x1099bb });
+/* const app = new PIXI.Application({ backgroundColor: 0x1099bb });
 document.body.appendChild(app.view);
 
 // Get the texture for rope.
@@ -55,7 +55,7 @@ app.ticker.add((delta) => {
 
 /**
  * Cubic interpolation based on https://github.com/osuushi/Smooth.js
- */
+
 function clipInput(k, arr) {
     if (k < 0) k = 0;
     if (k > arr.length - 1) k = arr.length - 1;
@@ -77,3 +77,5 @@ function cubicInterpolation(array, t, tangentFactor) {
     const t3 = t * t2;
     return (2 * t3 - 3 * t2 + 1) * p[0] + (t3 - 2 * t2 + t) * m[0] + (-2 * t3 + 3 * t2) * p[1] + (t3 - t2) * m[1];
 }
+
+ */
