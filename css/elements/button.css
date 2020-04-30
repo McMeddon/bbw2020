@@ -47,6 +47,7 @@ button {
 .button {margin: 1%; background-color: var(--bg-accent); border: none; color: var(--txt-light);}
 .buttoncolored {background-color: var(--primary); color: var(--txt-light);}
 .buttontransparent {border: 2px solid var(--primary); color: var(--primary);}
+.buttontext { color: var(--primary); text-transform: uppercase; font-weight: 600;}
 
 /* Buttons hover------------------------------------*/
 /*--------------------------------------------------------------*/
@@ -55,6 +56,7 @@ button {
 button:hover {cursor: var(--cursor-hover);}
 .buttoncolored:hover {background-color: var(--primarydark);}
 .buttontransparent:hover {background-color: var(--primary); color: var(--txt-light);}
+.buttontext:hover { color: var(--primarydark); text-rendering: geometricPrecision;}
 
 /*--------------------------------------------------------------*/
 /* interaction animation------------------------------------*/

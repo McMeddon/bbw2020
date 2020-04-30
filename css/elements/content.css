@@ -49,5 +49,5 @@ content kacheln>kachel:hover { filter: brightness(1.1); }
 content kacheln>kachel a,p {color: var(--txt-light);}
 content kacheln>kachel a:hover {color: var(--primary);}
 content kacheln>kachel>h3 {color: var(--txt-light);}
-content kacheln>kachel p {color: var(--txt-light); font-size: 1.2em;}
+content kacheln>kachel p {color: var(--txt-light);}
 content kacheln>kachel>img {}

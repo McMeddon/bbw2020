@@ -20,6 +20,9 @@
   .fullwidth {width: 100%;}
   .halfwidth {width: 50%;}
 
+  .spacing.big {padding:8%;}
+  .spacing.medium {padding:5%;}
+  .spacing.small {padding:2%;}
 /*--------------------------------------------------------------*/
 /* Align
 /*--------------------------------------------------------------*/

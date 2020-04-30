@@ -60,7 +60,9 @@ nav>logo>a>img {    width: calc(var(--nav-size)/1.2);    margin: 5px; float: lef
 nav>logo>a {color: var(--txt-light); text-decoration: none; text-decoration-line: none; font-weight: 600;}
 nav>logo>a>h2 {color: var(--txt-light); text-decoration: none; text-decoration-line: none; font-weight: 600;}
 
-nav>ul {   display: grid; justify-content: flex-end; list-style-type: none; padding: 0; display: inline-flex;  }
+nav>ul {   display: grid; justify-content: flex-end; list-style-type: none; padding: 0; display: inline-flex; ;
+  list-style-type: none;
+  text-align: center;        }
 nav>ul>li  {     
     justify-content: flex-end;
 }
@@ -100,11 +102,7 @@ nav>ul>li>a>.nav-icon { max-width: calc(var(--nav-size)/3); }
     nav>logo { position: relative; align-content: center;}
 }
 
-nav ul {  
-    display: block;
-    list-style-type: none;
-    text-align: center;        
-  }
+
 
 nav ul>li {
     display: inline-block;

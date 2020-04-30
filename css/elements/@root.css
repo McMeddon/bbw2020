@@ -30,7 +30,11 @@
 /*--------------------------------------------------------------*/
 /* [1] Global Root STYLES
 /*--------------------------------------------------------------*/
-html { background-color: var(--bg-accent); font-family: sans-serif;}
+html { 
+    background-color: var(--bg-accent); 
+    font-family: sans-serif;
+    
+}
 
 body { 
     margin: 0;  
@@ -40,6 +44,12 @@ body {
 
 a {text-decoration: none; color: var(--txt-light); outline: 0;} 
 a:hover {cursor:var(--cursor-hover);}
+p {    
+    font-weight: 300;
+    /* font-size: 1.375rem; */
+    font-size: 1.375rem;
+    line-height: 1.7rem;
+}
 
 /* Keine focus designs von browsern */
 button:focus, a:-moz-focus-inner, a:focus {  
