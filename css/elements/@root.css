@@ -1,0 +1,28 @@
+/*--------------------------------------------------------------*/
+/* [1] Global Root STYLES
+/*--------------------------------------------------------------*/
+
+* {margin: 0; padding: 0;}
+
+:root {
+    --halfwhite: rgba(255,255,255,0.3);
+    --transparent: rgb(255,255,255,0.0);
+    --primary: red;
+    --primarydark: darkred;
+    --txt-light: #ededed;
+    --txt-dark: #222;
+    --online-green: #1b9e1d;
+    
+    --bg: #242526;
+    --bg-light: #555;
+    --bg-accent: #484a4d;
+    --nav-size: 70px; 
+    --border: 2px solid #474a4d ;  
+    --border-radius: 6px;
+    --border-spacing: 4px;
+    --speed: 200ms;
+    --font-size: 14px;
+    --letter-spacing: -0.0415625em;
+    --cursor: url('/images/svg/sidewide/circle.svg'), auto;
+    --cursor-hover:url('/images/svg/sidewide/circle30-5.svg'), auto;
+}

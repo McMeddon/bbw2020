@@ -1,0 +1,148 @@
+/*--------------------------------------------------------------*/
+/* [2] navbar css-----------------------------------------------*/
+/*--------------------------------------------------------------*/
+
+.rotateable {transition: var(--speed);}
+.rotateable.rotated {transform: rotate(180deg);}
+
+nav {    
+    display: grid;
+    /* width: 100%; */
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr auto min-content; 
+    padding: 7px;
+    border-bottom: 1px solid var(--halfwhite);
+    z-index: 99999;
+}
+
+
+nav.defaultnav {
+    background-color: var(--bg);
+    display: grid;
+    position: relative;    
+    margin-right: -2%;
+    margin-left: -2%;
+    margin-top: -2%;
+    
+
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr auto; 
+
+    padding: 7px;
+    border-bottom: 1px solid var(--txt-light);
+    z-index: 99999;}
+
+.footer { /* nav class"footer" als variante*/
+    background-color: var(--bg); 
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr auto; 
+    min-height: 10vh;      
+    border-top: 1px solid var(--txt-light);
+    z-index: 99999;
+
+    /*-2% über den contentwrapper für fullwidth*/
+    position: relative;    
+   /*  margin-right: -2%;
+    margin-left: -2%; */
+    
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+
+nav>logo>a {display: grid; grid-template-columns: auto 1fr auto; align-items: center; justify-content: center;}
+
+nav>logo>a>img {    width: calc(var(--nav-size)/1.2);    margin: 5px; float: left;   }
+nav>logo>a {color: var(--txt-light); text-decoration: none; text-decoration-line: none; font-weight: 600;}
+nav>logo>a>h2 {color: var(--txt-light); text-decoration: none; text-decoration-line: none; font-weight: 600;}
+
+nav>ul {   display: grid; justify-content: flex-end; list-style-type: none; padding: 0; display: inline-flex;  }
+nav>ul>li  {     
+    justify-content: flex-end;
+}
+
+nav>ul>li>a {
+    color: var(--txt-light) !important; 
+    text-decoration: none;
+    --button-size: calc(var(--nav-size)*0.6);
+    min-width: var(--button-size);
+    height: var(--button-size);
+    background-color: var(--bg-accent);
+    border-radius: 50px;
+    margin: 2px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    transition: filter 200ms;
+} 
+nav>ul>li>a:hover { filter: brightness(1.4);}
+nav>ul>li>a>.nav-icon { max-width: calc(var(--nav-size)/3); } 
+
+
+
+/* [2.1] mobile menu---------------------------------------------*/
+/*--------------------------------------------------------------*/
+
+@media screen and (max-width: 800px ) {    
+    nav, nav.defaultnav, nav.footer { grid-template-columns: auto ; grid-template-rows: auto auto; align-content: center; justify-content: center; grid-gap: 1px;}
+    nav>logo { position: relative; align-content: center;}
+}
+
+/* [2.1] footermobile menu---------------------------------------------*/
+/*--------------------------------------------------------------*/
+
+@media screen and (max-width: 800px) {    
+    nav, nav.defaultnav, nav.footer { grid-template-columns: auto ; grid-template-rows: auto auto; align-content: center; justify-content: center; grid-gap: 1px;}
+    nav>logo { position: relative; align-content: center;}
+}
+
+nav ul {  
+    display: block;
+    list-style-type: none;
+    text-align: center;        
+  }
+
+nav ul>li {
+    display: inline-block;
+    color: var(--txt-light);
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    position: relative;
+  }
+
+nav ul>li>ul>li:hover {
+    display: block;
+    background: var(--bg-accent) ;
+    color: #000;
+    border-radius: 5px;
+  }
+
+nav ul>li>a {color: var(--txt-light);}
+nav ul>li>.dropdown {
+    display: none;
+    min-width: 200px;
+    padding: 0; margin: 0;
+    background: var(--bg);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    border-radius: 5px;
+    border: 1px solid var(--bg-accent);
+    z-index: 9;
+    transition: var(--speed);
+  }
+  
+  ul>li>.dropdown>li {
+    width: 100%;
+    display: block;
+    padding: 10px 0px; margin: 0px;
+  }
+  #dd:checked ~ .dropdown {
+    display: block;
+
+  }

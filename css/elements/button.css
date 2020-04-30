@@ -1,0 +1,57 @@
+/*--------------------------------------------------------------*/
+/* Global Buttons------------------------------------*/
+/*--------------------------------------------------------------*/
+
+button {
+    margin: 1%; 
+    padding: 14px; 
+    background-color: var(--transparent); 
+    border: none; 
+    border-radius: var(--border-radius);
+    
+    min-width: 120px; 
+    font-size: calc(var(--font-size)*1.2vw); 
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+    transition: var(--speed);
+    border: 0; 
+    outline: 0;
+}
+.button { 
+    margin: 1%; 
+    padding: 14px; 
+
+    background-color: var(--transparent); 
+    border: none; 
+    cursor: var(--cursor); 
+    border-radius: 4px;
+    
+    min-width: 120px; 
+    font-size: calc(var(--font-size)*1.2vw); 
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+    transition: var(--speed);
+    outline: 0;
+}
+
+/* [4.1] Button style types------------------------------------*/
+/*--------------------------------------------------------------*/
+
+.dark {color: var(--txt-light);background-color: var(--bg); border: var(--border);}
+.light {color: var(--txt-dark); background-color: var(--txt-light); }
+.round {border-radius: 25px;}
+.button {margin: 1%; background-color: var(--bg-accent); border: none; color: var(--txt-light);}
+.buttoncolored {background-color: var(--primary); color: var(--txt-light);}
+.buttontransparent {border: 2px solid var(--primary); color: var(--primary);}
+
+/* [4.2] Buttons hover------------------------------------*/
+/*--------------------------------------------------------------*/
+.dark:hover {color: var(--txt-light);background-color: var(--bg-light);}
+.light:hover {color: var(--txt-dark); background-color: var(--halfwhite); }
+button:hover {cursor: var(--cursor-hover);}
+.buttoncolored:hover {background-color: var(--primarydark);}
+.buttontransparent:hover {background-color: var(--primary); color: var(--txt-light);}

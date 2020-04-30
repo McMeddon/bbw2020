@@ -1,0 +1,47 @@
+
+.liveicon {                                             /* liveicon baseclass*/
+    width: calc(var(--nav-size)/3);
+    height: calc(var(--nav-size)/3);
+    position: relative;float: left;
+    border-radius: 100%;
+    top: 0px;
+  }
+  .streamlistitem.offline .liveicon { background-color: red;}              /* liveicon subclass*/
+  .streamlistitem.online .liveicon { background-color: var(--online-green);} /* liveicon subclass*/
+  
+  .streamlistitem {
+    width: 100%;
+  }
+  
+  .vertical-scrollmenu {
+    display: grid;
+    overflow: auto;
+    white-space: nowrap;
+    align-content: center;
+  }
+.streamlistitem {
+    display: inline-block;
+    color: var(--txt-light);
+    text-align: center;
+  }
+  
+  .circular--square {
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+  }
+  
+
+.streamcontent {
+    display: contents;
+  }
+  
+  .twitch-player iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius); /*kacheln similiar border radius style*/
+    margin-top: var(--border-spacing); /*align fix mit kacheln*/
+    
+  }
+  

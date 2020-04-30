@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------*/
+/* [1] dropIn Klassen
+/*--------------------------------------------------------------*/
+
+@media screen and (max-width: 800px) {
+    .herobannerH1 {  font-size: 60px !important;}
+  }
+  
+  @media screen and (min-width: 800px) {
+    .floatcenter {display: grid; place-items: center; place-content: center; }
+  }
+  .herobannerH1 {
+    font-size: 10rem;
+    font-weight: 100;
+    padding: .1em;
+    position: relative;  
+  }
+  .fullheight {height: 100vh;}
+  .halfheight {height: 50vh;}
+  .fullwidth {width: 100%;}
+  .halfwidth {width: 50%;}
+  
+  .alignbottom {display: grid; justify-items: end !important;}
+  .aligncenter {display: grid; align-items: center; align-self: center; align-content: center;}
+  
+  .front9 {z-index: 9;}
+  .front99 {z-index: 99;}
+  .front999 {z-index: 999;}
+  .offscreen {position: absolute; left: -999999999999px;} /* offscreen values like TS IP input field moved offscreen*/

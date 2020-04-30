@@ -13,118 +13,30 @@
 /* [7] 
 */ 
 
-/*--------------------------------------------------------------*/
-/* [1] dropIn Klassen
-/*--------------------------------------------------------------*/
-@media screen and (max-width:800px){
-  .herobannerH1{  font-size: 60px !important;}
-}
 
-@media screen and (min-width:800px){
-  .floatcenter{display:grid; place-items: center; place-content: center; }
-}
-.herobannerH1{
-  font-size: 10rem;
-  font-weight: 100;
-  padding: .1em;
-  position: relative;  
-}
-.fullheight{height: 100vh;}
-.halfheight{height: 50vh;}
-.fullwidth{width:100%;}
-.halfwidth{width: 50%;}
-
-.alignbottom{display: grid; justify-items: end !important;}
-.aligncenter{display:grid; align-items: center; align-self: center; align-content: center;}
-
-.front9{z-index: 9;}
-.front99{z-index: 99;}
-.front999{z-index: 999;}
-.offscreen{position: absolute; left:-999999999999px;} /* offscreen values like TS IP input field moved offscreen*/
 /*--------------------------------------------------------------*/
 /* [1] Default content wrapper styles
 /*--------------------------------------------------------------*/
-content{
-        display:grid; 
-        color:var(--txt-light); 
-        z-index:9999;
+content {
+        display: grid; 
+        color: var(--txt-light); 
+        z-index: 9999;
 
         margin-top: 1rem; 
-        margin:2%;
+        margin: 2%;
     }
 
-content>fliestext{     
-                    display:grid;
+content>fliestext {     
+                    display: grid;
                     width: 100%;
                     max-width: 580px;
-                    margin:auto;
+                    margin: auto;
                     }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 800px) {
 
-content>fliestext{ margin-left: 5%;}
+content>fliestext { margin-left: 5%;}
 }
-
-/* [1] Tabbars
-/*--------------------------------------------------------------*/
-
- /* Style the tab */
- .tab {
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  
-  min-height: var(--nav-size);
-  border-bottom: 1px solid var(--halfwhite);
-  grid-gap:2px ;
-}
-@media screen and (max-width:800px){ grid-template-columns: repeat(auto-fit, minmax(100%, min-content));}
-
- /* .tab {
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, min-content));
-  grid-template-rows: repeat(auto-fit, minmax(200px, min-content));
-  min-height: var(--nav-size);
-  border-bottom: 1px solid var(--halfwhite);
-} */
-
-/* Style the buttons that are used to open the tab content */
-.tab button, .tab li button {
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
-  max-height: var(--nav-size);
-  min-height: var(--nav-size);
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 100%;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover, .tab li button:hover {
-  color: var(--txt-light);
-  background-color: var(--bg);
-  filter: contrast(110%);
- }
-
-/* Create an active/current tablink class */
-.tab button:active,.tab button:focus, .tab li button:active,.tab li button:focus, .tab li button:-moz-focusring
- { 
-  outline: none;
-  border-color: var(--txt-light);
-  border-radius: 4px 4px 0px 0px;
-  border-bottom: none;
-  background-color: var(--bg);
-  color: var(--txt-light) ;
-  filter: contrast(110%);
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding:5%;
-    
-} 
 
 /*--------------------------------------------------------------*/
 /* [2] Startseiten styles
@@ -141,64 +53,64 @@ content>fliestext{ margin-left: 5%;}
                       
         }
 
-heroimage img {min-height: 50%; top:0; z-index: -1;} /*hero banner img größe reduzierung*/
-  .img-gradient:after {
-    content:'';
-    position:absolute;
-    left:0; top:0;
-    width:100%; height:100%;
-    display:inline-block;
+heroimage img {min-height: 50%; top: 0; z-index: -1;} /*hero banner img größe reduzierung*/
+.img-gradient:after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    display: inline-block;
     background: linear-gradient(0deg, rgba(72,74,77,1) 20%, rgba(34,34,34,.1) 70%);
     z-index: -1;
     
   }
-  .img-gradient img{
-    display:block;
+  .img-gradient img {
+    display: block;
     filter: blur(10px);
     padding-bottom: 25px;
     z-index: -1;
   }
 
 
-content>herobanner{display:grid; text-align: center;}
-content>herobanner>mainframe{ display:grid; align-content: center; justify-content: center; }
-content>herobanner>mainframe>.herologo{ width:100%;max-width:340px; margin-bottom:-240px; padding:-10px; filter: invert();}
-content>herobanner>mainframe>h1{color:var(--txt-light); font-weight:600; font-size: 3em; padding-top:50%; margin:0; z-index: 123;}
-content>herobanner>mainframe>p{color:var(--txt-light);font-weight: 100; font-size: 1.25em;}
+content>herobanner {display: grid; text-align: center;}
+content>herobanner>mainframe { display: grid; align-content: center; justify-content: center; }
+content>herobanner>mainframe>.herologo { width: 100%;max-width: 340px; margin-bottom: -240px; padding: -10px; filter: invert();}
+content>herobanner>mainframe>h1 {color: var(--txt-light); font-weight: 600; font-size: 3em; padding-top: 50%; margin: 0; z-index: 123;}
+content>herobanner>mainframe>p {color: var(--txt-light);font-weight: 100; font-size: 1.25em;}
 
 /* [2.2] kacheln*/
-@media screen and (min-width: 800px){
-  content kacheln{
-    display:grid;
+@media screen and (min-width: 800px) {
+  content kacheln {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     grid-template-rows: 100%; 
   }
 }
-content kacheln>kachel>.card-tall{      grid-template-rows:span 2 / auto ; }
-content kacheln>kachel>.card-wide{      grid-template-columns: span 2 / auto ; }
-content kacheln>kachel>.card-big{      grid-column: span 2 / auto ; grid-row: span 2 / auto ; }
+content kacheln>kachel>.card-tall {      grid-template-rows: span 2 / auto ; }
+content kacheln>kachel>.card-wide {      grid-template-columns: span 2 / auto ; }
+content kacheln>kachel>.card-big {      grid-column: span 2 / auto ; grid-row: span 2 / auto ; }
 
-content kacheln>kachel{ 
-    margin:var(--border-spacing);      
+content kacheln>kachel { 
+    margin: var(--border-spacing);      
     background-color: var(--bg);    
-    padding:5%;     
-    display:grid;    
+    padding: 5%;     
+    display: grid;    
     justify-content: start; 
     align-items: start; /* padding-bottom: 15%; */   
     transition: filter 150ms; 
     border-radius: var(--border-radius);}
-content kacheln>kachel:hover{ filter: brightness(1.1); cursor: pointer;} 
+content kacheln>kachel: hover { filter: brightness(1.1); } 
 
-content kacheln>kachel a,p{color:var(--txt-light);}
-content kacheln>kachel a:hover{color:var(--primary);}
-content kacheln>kachel>h3{color:var(--txt-light);}
-content kacheln>kachel p{color:var(--txt-light); font-size: 1.2em;}
-content kacheln>kachel>img{}
+content kacheln>kachel a,p {color: var(--txt-light);}
+content kacheln>kachel a:hover {color: var(--primary);}
+content kacheln>kachel>h3 {color: var(--txt-light);}
+content kacheln>kachel p {color: var(--txt-light); font-size: 1.2em;}
+content kacheln>kachel>img {}
 
-.two-column{display:grid; grid-template-columns:1fr auto; grid-gap:auto;}
-/* .three-column{display:grid; grid-template-columns:1fr 3fr auto; grid-gap:auto;} */
-.three-column{display:grid; grid-template-columns:1fr 1fr auto; grid-gap: 2%; align-items: center;}
-.three-right-column{display:grid; grid-template-columns: 1fr auto min-content; grid-gap: 2%; align-items: center;}
+.two-column {display: grid; grid-template-columns: 1fr auto; grid-gap: auto;}
+/* .three-column {display: grid; grid-template-columns: 1fr 3fr auto; grid-gap: auto;} */
+.three-column {display: grid; grid-template-columns: 1fr 1fr auto; grid-gap: 2%; align-items: center;}
+.three-right-column {display: grid; grid-template-columns: 1fr auto min-content; grid-gap: 2%; align-items: center;}
 
 
 
@@ -208,87 +120,40 @@ content kacheln>kachel>img{}
 /*--------------------------------------------------------------*/
 /* [3] Livestream - Creator Icons
 /*--------------------------------------------------------------*/
-#live{
-    display:grid;
+#live {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     padding: 5%;
-    align-items:center;
+    align-items: center;
     color: var(--txt-light);
     background-repeat: none;
 }
-.frontpageh2{   color: var(--txt-light);  font-size: 3em; text-decoration: underline; margin-top: 1em;}
+.frontpageh2 {   color: var(--txt-light);  font-size: 3em; text-decoration: underline; margin-top: 1em;}
 /* [3] Livestream - Creator Icons
 /*--------------------------------------------------------------*/
-.creator{
+.creator {
             align-content: center;
             justify-content: center;
             text-align: center;
             background-repeat: none;
-            max-height:cal(var(--nav-size)*2) ;
+            max-height: cal(var(--nav-size)*2) ;
             max-width: cal(var(--nav-size)*2);
-            padding:5%;
-            padding-bottom:-10px;
+            padding: 5%;
+            padding-bottom: -10px;
             transition: 200ms;
             margin-bottom: -10px;
-            border: var(--border)
+            border: var(--border);
         }
 
-.creator:hover{ background-color: var(--bg); border:1px solid var(--txt-dark); opacity: 1.4; }
-.creator>a:hover{ filter:opacity(1.4);}
-.creator>a>img{border-radius: 100%; margin-bottom:-0px;}
-.creator>a{ text-decoration: none; color: var(--txt-light);    transition: filter 300ms;}
-.creator>a>h3{ font-size: 2em; margin:0; }
-
-/* [3.1] TwitchStream
-/*--------------------------------------------------------------*/
+.creator:hover { background-color: var(--bg); border: 1px solid var(--txt-dark); opacity: 1.4; }
+.creator>a:hover { filter: opacity(1.4);}
+.creator>a>img {border-radius: 100%; margin-bottom: -0px;}
+.creator>a { text-decoration: none; color: var(--txt-light);    transition: filter 300ms;}
+.creator>a>h3 { font-size: 2em; margin: 0; }
 
 
-.liveicon {                                             /* liveicon baseclass*/
-  width: calc(var(--nav-size)/3);
-  height: calc(var(--nav-size)/3);
-  position: relative;float: left;
-  border-radius: 100%;
-  top: 0px;
-  left: px;
-}
-.streamlistitem.offline .liveicon{ background-color: red;}              /* liveicon subclass*/
-.streamlistitem.online .liveicon{ background-color: var(--online-green);} /* liveicon subclass*/
 
-.streamlistitem {
-  width:100%;
-}
 
-.vertical-scrollmenu {
-  display:grid;
-  overflow: auto;
-  white-space: nowrap;
-  align-content: center;
-}
-
-.streamlistitem {
-  display: inline-block;
-  color: var(--txt-light);
-  text-align: center;
-}
-
-.circular--square {
-  border-top-left-radius: 50% 50%;
-  border-top-right-radius: 50% 50%;
-  border-bottom-right-radius: 50% 50%;
-  border-bottom-left-radius: 50% 50%;
-}
-
-.streamcontent{
-  display:contents;
-}
-
-.twitch-player iframe {
-  width: 100%;
-  height: 100%;
-  border-radius: var(--border-radius); /*kacheln similiar border radius style*/
-  margin-top: var(--border-spacing); /*align fix mit kacheln*/
-  
-}
 
 
 
