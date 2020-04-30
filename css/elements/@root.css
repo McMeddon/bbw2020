@@ -26,3 +26,44 @@
     --cursor: url('/images/svg/sidewide/circle.svg'), auto;
     --cursor-hover:url('/images/svg/sidewide/circle30-5.svg'), auto;
 }
+
+/*--------------------------------------------------------------*/
+/* [1] Global Root STYLES
+/*--------------------------------------------------------------*/
+html { background-color: var(--bg-accent); font-family: sans-serif;}
+
+body { 
+    margin: 0;  
+    padding: 0; 
+    cursor: var(--cursor);
+}
+
+a {text-decoration: none; color: var(--txt-light); outline: 0;} 
+a:hover {cursor:var(--cursor-hover);}
+
+/* Keine focus designs von browsern */
+button:focus, a:-moz-focus-inner, a:focus {  
+    border: 1px solid white;
+    outline: 1px solid white;
+    filter: contrast(110%); 
+  }
+
+
+
+@media screen and ( max-width: 800px) {
+  .desktop { display: none;}
+  h3,h4,h5,h6 { font-size: 1.7rem; font-weight: 200;}
+}
+@media screen and ( min-width: 800px) {
+  .handy { display: none;}
+}
+ 
+
+/* width */::-webkit-scrollbar { width: 6px; border-radius: 8px; height: 0px;}
+/* Track */::-webkit-scrollbar-track {  background: var(--bg-accent); }
+/* Handle */::-webkit-scrollbar-thumb {  background: var(--primary);}
+/* Handle on hover */::-webkit-scrollbar-thumb:hover { background: var(--primarydark);}
+
+
+
+

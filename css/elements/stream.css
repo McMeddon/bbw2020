@@ -1,4 +1,20 @@
 
+
+/*--------------------------------------------------------------*/
+/* [3] Livestream - Creator Icons Startpage style
+/*--------------------------------------------------------------*/
+#live {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    padding: 5%;
+    align-items: center;
+    color: var(--txt-light);
+    background-repeat: none;
+}
+
+/*--------------------------------------------------------------*/
+/* [3] Livestream - Creator Icons
+/*--------------------------------------------------------------*/
 .liveicon {                                             /* liveicon baseclass*/
     width: calc(var(--nav-size)/3);
     height: calc(var(--nav-size)/3);
@@ -45,3 +61,25 @@
     
   }
   
+
+  /* [3] Livestream - Creator Icons
+/*--------------------------------------------------------------*/
+.creator {
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    background-repeat: none;
+    max-height: cal(var(--nav-size)*2) ;
+    max-width: cal(var(--nav-size)*2);
+    padding: 5%;
+    padding-bottom: -10px;
+    transition: 200ms;
+    margin-bottom: -10px;
+    border: var(--border);
+}
+
+.creator:hover { background-color: var(--bg); border: 1px solid var(--txt-dark); opacity: 1.4; }
+.creator>a:hover { filter: opacity(1.4);}
+.creator>a>img {border-radius: 100%; margin-bottom: -0px;}
+.creator>a { text-decoration: none; color: var(--txt-light);    transition: filter 300ms;}
+.creator>a>h3 { font-size: 2em; margin: 0; }

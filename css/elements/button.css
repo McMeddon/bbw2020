@@ -38,7 +38,7 @@ button {
     outline: 0;
 }
 
-/* [4.1] Button style types------------------------------------*/
+/* Button style types------------------------------------*/
 /*--------------------------------------------------------------*/
 
 .dark {color: var(--txt-light);background-color: var(--bg); border: var(--border);}
@@ -48,10 +48,32 @@ button {
 .buttoncolored {background-color: var(--primary); color: var(--txt-light);}
 .buttontransparent {border: 2px solid var(--primary); color: var(--primary);}
 
-/* [4.2] Buttons hover------------------------------------*/
+/* Buttons hover------------------------------------*/
 /*--------------------------------------------------------------*/
 .dark:hover {color: var(--txt-light);background-color: var(--bg-light);}
 .light:hover {color: var(--txt-dark); background-color: var(--halfwhite); }
 button:hover {cursor: var(--cursor-hover);}
 .buttoncolored:hover {background-color: var(--primarydark);}
 .buttontransparent:hover {background-color: var(--primary); color: var(--txt-light);}
+
+/*--------------------------------------------------------------*/
+/* interaction animation------------------------------------*/
+/*--------------------------------------------------------------*/
+
+.denied:hover {
+    animation: headShake;
+    animation-duration: 1.2s ;
+    animation-delay: 0.7s ;
+    animation-iteration-count: 1;
+  }
+
+.hover:hover {
+    transform: scale(1.2);
+    transform: translateY(-2px);
+    transition: 200ms ease-in-out;
+    z-index: 9999;
+    
+    -webkit-box-shadow: 0px 10px 21px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 21px -8px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 21px -8px rgba(0,0,0,0.75);
+}

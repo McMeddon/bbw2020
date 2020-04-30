@@ -3,6 +3,9 @@
 
 <head id="header">
     
+    <meta content-encoding="br">
+
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="/__/firebase/7.14.2/firebase-app.js"></script>
     
@@ -12,9 +15,7 @@
     <!-- Initialize Firebase -->
     <script defer src="/__/firebase/init.js"></script>
     <script defer src="/__/firebase/7.14.2/firebase-analytics.js"></script>
-    
-    <meta name="google-site-verification" content="ghOyzRlVeafqGR6rcUBB_McSByjoAZ0VLSSvVgLNe78">
-    
+      
 
     <!--META----------------------------------------------------------->
     <title>Bladebrothers Gaming Community</title>
@@ -40,7 +41,7 @@
     <link rel="stylesheet" href="./css/themes/default.min.css" />
     <link rel="stylesheet" href="./animate.css-master/animate.min.css">
     <!-- <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js"></script> -->
-    <script src="./js/lazyload.js"> //lazyload eigen</script> 
+    <!-- <script src="./js/lazyload.js"> //lazyload eigen</script>  -->
     
     <!-- FONTS-->
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
@@ -83,6 +84,7 @@
     <script defer src="./js/lib/alertify.min.js"></script>
     <!--load function enabler JQuery-->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
+    <script defer src="lazysizes.min.js"</script>
     <!-- include nav function-->
     <script> $(function () { $("#nav-placeholder").load("templates/navbar.html"); });</script>
     <!-- include footer function-->
@@ -109,7 +111,7 @@
                     BladeBrothers</h1>
                 <hr class="animated fadeIn slow delay-1s">
                 <h2 class="animated fadeIn slower delay-1s"> Gaming Community since 2010</h2>
-                <!--  <img class="lazy" loading="lazy" alt="bladebros" src="./images/svg/chevron.svg" heigth="50px" width="50px" style="filter:invert();"
+                <!--  <img class="lazyload" loading="lazy" alt="bladebros" src="./images/svg/chevron.svg" heigth="50px" width="50px" style="filter:invert();"
                     class="animated fadeIn slower "> -->
             </mainframe>
         </herobanner>
@@ -118,7 +120,7 @@
             <kachel class=" denied" style="z-index: 9;">
                 <a href="./join">
                     <img 
-                        class="lazy" 
+                        class="lazyload" 
                         loading="lazy" 
                         alt="bladebros" 
                         src="./images/svg/bblogored.png" 
@@ -142,7 +144,7 @@
             <kachel style="background-image: url();" class=" hover">
                 <a href="https://steamcommunity.com/groups/BladeBrothers" target="_blank" rel="noreferrer">
                     <img 
-                        class="lazy" 
+                        class="lazyload" 
                         loading="lazy" 
                         alt="bladebros" 
                         src="./images/svg/Steam.svg"    
@@ -167,7 +169,7 @@
             <kachel style="background-image: url();" class="hover">
                 <a href="">
                     <img 
-                        class="lazy" 
+                        class="lazyload" 
                         loading="lazy" 
                         alt="bladebros" 
                         src="./images/svg/discord.svg" 
@@ -182,7 +184,7 @@
             <kachel style="background-image: url();" class="hover">
                 <a>
                     <img 
-                        class="lazy" 
+                        class="lazyload" 
                         loading="lazy" 
                         alt="bladebros" 
                         src="./images/svg/bblogogold.png" 
@@ -207,11 +209,11 @@
                 <a href="/streams?stream=?monstercat">
                     <img 
                         alt="bladebros" 
-                        src="./images/events.PNG"
-                        data-src="./images/events.png"
+                        src="./images/kanta.PNG"
+                        data-src="./images/kanta.png"
                         width="150px"
                         height="150px"
-                        class="lazy" 
+                        class="lazyload" 
                         loading="lazy" 
                         >
                     <h3>Kantalupi</h3>
@@ -226,7 +228,7 @@
                         data-src="./images/kanta.PNG"
                         width="150px"
                         height="150px"
-                        class="lazy" 
+                        class="lazyload" 
                         loading="lazy" 
                         >
                     <h3>Meddon</h3>
@@ -242,7 +244,7 @@
                     data-src="./images/devicesillustration.png"
                     width="150px"
                     height="150px"
-                    class="lazy" 
+                    class="lazyload" 
                     loading="lazy" 
                     >
                     <h3>Energizer</h3>
@@ -255,7 +257,7 @@
                     <img 
                         width="150px"
                         height="150px"
-                        class="lazy" 
+                        class="lazyload" 
                         loading="lazy" 
                         alt="bladebros" 
                         src="./images/svg/bell.svg"

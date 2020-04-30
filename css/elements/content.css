@@ -1,0 +1,53 @@
+/*--------------------------------------------------------------*/
+/* Default content wrapper styles
+/*--------------------------------------------------------------*/
+content {
+    display: grid; 
+    color: var(--txt-light); 
+    z-index: 9999;
+
+    margin-top: 1rem; 
+    margin: 2%;
+}
+
+content>fliestext {     
+                display: grid;
+                width: 100%;
+                max-width: 580px;
+                margin: auto;
+                }
+
+@media screen and (min-width: 800px) {
+
+content>fliestext { margin-left: 5%;}
+}
+
+
+/* [2.2] kacheln*/
+@media screen and (min-width: 800px) {
+  content kacheln {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    grid-template-rows: 100%; 
+  }
+}
+content kacheln>kachel>.card-tall {      grid-template-rows: span 2 / auto ; }
+content kacheln>kachel>.card-wide {      grid-template-columns: span 2 / auto ; }
+content kacheln>kachel>.card-big {      grid-column: span 2 / auto ; grid-row: span 2 / auto ; }
+
+content kacheln>kachel { 
+    margin: var(--border-spacing);      
+    background-color: var(--bg);    
+    padding: 5%;     
+    display: grid;    
+    justify-content: start; 
+    align-items: start; /* padding-bottom: 15%; */   
+    transition: filter 150ms; 
+    border-radius: var(--border-radius);}
+content kacheln>kachel:hover { filter: brightness(1.1); } 
+
+content kacheln>kachel a,p {color: var(--txt-light);}
+content kacheln>kachel a:hover {color: var(--primary);}
+content kacheln>kachel>h3 {color: var(--txt-light);}
+content kacheln>kachel p {color: var(--txt-light); font-size: 1.2em;}
+content kacheln>kachel>img {}

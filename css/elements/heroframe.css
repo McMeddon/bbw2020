@@ -1,0 +1,38 @@
+/*--------------------------------------------------------------*/
+/* [2] Startseiten styles
+/*--------------------------------------------------------------*/
+/* [2.1] Herobanner*/
+#myVideo, heroimage img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    
+              
+}
+
+heroimage img {min-height: 50%; top: 0; z-index: -1;} /*hero banner img größe reduzierung*/
+.img-gradient:after {
+content: '';
+position: absolute;
+left: 0; top: 0;
+width: 100%; height: 100%;
+display: inline-block;
+background: linear-gradient(0deg, rgba(72,74,77,1) 20%, rgba(34,34,34,.1) 70%);
+z-index: -1;
+
+}
+.img-gradient img {
+display: block;
+filter: blur(10px);
+padding-bottom: 25px;
+z-index: -1;
+}
+
+content>herobanner {display: grid; text-align: center;}
+content>herobanner>mainframe { display: grid; align-content: center; justify-content: center; }
+content>herobanner>mainframe>.herologo { width: 100%;max-width: 340px; margin-bottom: -240px; padding: -10px; filter: invert();}
+content>herobanner>mainframe>h1 {color: var(--txt-light); font-weight: 600; font-size: 3em; padding-top: 50%; margin: 0; z-index: 123;}
+content>herobanner>mainframe>p {color: var(--txt-light);font-weight: 100; font-size: 1.25em;}
