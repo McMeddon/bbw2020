@@ -29,7 +29,7 @@ const options = {
     channel: urlparam,
     theme: "dark",
 };
-const embed = new Twitch.Embed('stream', options);
+const embed = new Twitch.Embed("stream", options);
 
 var streamers = new Array();
 /* END GLOBAL VARS */
@@ -38,7 +38,7 @@ var streamers = new Array();
 window.history.replaceState({}, document.title, "/" + "streams");
 
 //render streams
-db.collection('Streamer').get().then((snapshot) => {
+db.collection("Streamer").get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         renderStreamer(doc);
     });
@@ -53,15 +53,15 @@ setInterval(updateStreams, 180000); //3 min
 function renderStreamer(doc) {
     let streamer = doc.data();
     streamers.push(new Streamer(doc.id, streamer));
-    let ul = document.querySelector('#streamlist');
-    let li = document.createElement('li');
-    let button = document.createElement('button');
-    let div = document.createElement('div');
+    let ul = document.querySelector("#streamlist");
+    let li = document.createElement("li");
+    let button = document.createElement("button");
+    let div = document.createElement("div");
 
     li.setAttribute('data-id', doc.id);
     li.id = streamer.Name;
     li.classList.add('streamlistitem');
-    li.classList.add('offline');
+    li.classList.add("offline");
 
     button.classList.add('tablinks');
     button.classList.add('button');
@@ -133,36 +133,36 @@ function updateStreams() {
     var ul = document.getElementById('streamlist')
 
     for (let i = ul.childNodes.length; i--;) {
-        if (ul.childNodes[i].nodeName === 'LI')
+        if (ul.childNodes[i].nodeName === 'LI');
             getTwitchChannelStatus(ul.childNodes[i].id);
     }
     orderStreams(ul);
 }
 
 function orderStreams(ul) {
-    var new_ul = ul.cloneNode(false);
+    var newUL = ul.cloneNode(false);
 
     var lis = [];
     for (let i = ul.childNodes.length; i--;) {
         if (ul.childNodes[i].nodeName === 'LI')
-            if (ul.childNodes[i].classList.contains('online'))
+            if (ul.childNodes[i].classList.contains("online"))
                 lis.push(ul.childNodes[i]);
     }
     for (let i = ul.childNodes.length; i--;) {
         if (ul.childNodes[i].nodeName === 'LI')
-            if (!ul.childNodes[i].classList.contains('online'))
+            if (!ul.childNodes[i].classList.contains("online"))
                 lis.push(ul.childNodes[i]);
     }
 
     for (let i = 0; i < lis.length; i++)
-        new_ul.appendChild(lis[i]);
-    ul.parentNode.replaceChild(new_ul, ul);
+        newUL.appendChild(lis[i]);
+    ul.parentNode.replaceChild(newUL, ul);
 }
 
 function toggleOnline(el, live, viewers) {
-    if ((el.classList.contains('offline') && live) || (el.classList.contains('online') && !live)) {
-        el.classList.toggle('online');
-        el.classList.toggle('offline');
+    if ((el.classList.contains("offline") && live) || (el.classList.contains("online") && !live)) {
+        el.classList.toggle("online");
+        el.classList.toggle("offline");
     }
     streamers.find(x => x.Dataid === el.getAttribute('data-id')).Viewers = viewers;
     streamers.find(x => x.Dataid === el.getAttribute('data-id')).Online = live;
@@ -187,7 +187,7 @@ function getTwitchChannelStatus(channel) {
             objChannel = JSON.parse(x);
             var live = false;
             var viewers = 0;
-            if (typeof objChannel.data[0] !== 'undefined') {
+            if (typeof objChannel.data[0] !== "undefined") {
                 live = objChannel.data[0].type;
                 viewers = objChannel.data[0].viewer_count;
             }
@@ -201,7 +201,7 @@ function getTwitchChannelStatus(channel) {
 function getStatus(userid, callback) {
     var request = new XMLHttpRequest();
 
-    request.addEventListener('load', function (event) {
+    request.addEventListener("load", function (event) {
         if (request.status >= 200 && request.status < 300) {
             //console.log(request.responseText);
             callback(request.responseText);
@@ -235,8 +235,6 @@ function getTwitchUser(user, callback) {
 }
 
 function hold() {
-
-
     request.onreadystatechange = function () {
         if (request.readyState === 4) {
             callback(request.response);

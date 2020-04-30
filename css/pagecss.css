@@ -99,7 +99,7 @@ content kacheln>kachel {
     align-items: start; /* padding-bottom: 15%; */   
     transition: filter 150ms; 
     border-radius: var(--border-radius);}
-content kacheln>kachel: hover { filter: brightness(1.1); } 
+content kacheln>kachel:hover { filter: brightness(1.1); } 
 
 content kacheln>kachel a,p {color: var(--txt-light);}
 content kacheln>kachel a:hover {color: var(--primary);}
