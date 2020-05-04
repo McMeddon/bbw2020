@@ -37,13 +37,41 @@ var streamers = new Array();
 /* INIT SEQUENCE */
 window.history.replaceState({}, document.title, "/" + "streams");
 
-//render streams
+
+
+
+var streamers_static = [
+    {
+        id: 123, data: { Name: 'monstercat', DisplayName: 'Monstercat', Description: 'London is the capital city of England.' }
+    },
+    { 
+        id: 124, data: { Name: 'Gronkh', DisplayName: 'Gronkh', Description: 'This is a test.' } 
+    },
+    { 
+        id: 125, data: { Name: 'meddontv', DisplayName: 'Meddon', Description: 'Meddon ist auch eine Stadt des Herzens.' } 
+    },
+    { 
+        id: 126, data: { Name: 'kantalupi1909', DisplayName: 'Kantalupi', Description: 'Kantalupi ist auch eine Stadt des Herzens.' } 
+    }
+]
+
+//render streams 
+streamers_static.forEach(doc => {
+    renderStreamer(doc);
+});
+updateStreams();
+
+//render streams firebase
+/*
 db.collection("Streamer").get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         renderStreamer(doc);
     });
     updateStreams();
 });
+*/
+
+
 //set update interval for streams
 setInterval(updateStreams, 180000); //3 min
 /* END INIT SEQUENCE */
@@ -51,7 +79,7 @@ setInterval(updateStreams, 180000); //3 min
 /* FUNCTIONS */
 
 function renderStreamer(doc) {
-    let streamer = doc.data();
+    let streamer = doc.data; //doc.data(); firebase version
     streamers.push(new Streamer(doc.id, streamer));
     let ul = document.querySelector("#streamlist");
     let li = document.createElement("li");
@@ -98,7 +126,6 @@ function openInformationTab(evt, dataid) {
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
-
     document.getElementById('StreamerTabTitle').innerText = streamers.find(x => x.Dataid === dataid).DisplayName;
     document.getElementById('StreamerTabDescription').innerText = streamers.find(x => x.Dataid === dataid).Description;
     document.getElementById('StreamerTabViewers').innerHTML = streamers.find(x => x.Dataid === dataid).Viewers;
@@ -134,7 +161,7 @@ function updateStreams() {
 
     for (let i = ul.childNodes.length; i--;) {
         if (ul.childNodes[i].nodeName === 'LI');
-            getTwitchChannelStatus(ul.childNodes[i].id);
+        getTwitchChannelStatus(ul.childNodes[i].id);
     }
     orderStreams(ul);
 }
