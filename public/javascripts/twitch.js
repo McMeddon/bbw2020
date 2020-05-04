@@ -52,6 +52,9 @@ var streamers_static = [
     },
     { 
         id: 126, data: { Name: 'kantalupi1909', DisplayName: 'Kantalupi', Description: 'Kantalupi ist auch eine Stadt des Herzens.' } 
+    },
+    { 
+        id: 127, data: { Name: 'esl_csgo', DisplayName: 'ESL CSGO', Description: 'HALLO TEST.' } 
     }
 ]
 
