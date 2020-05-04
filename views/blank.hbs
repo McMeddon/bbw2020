@@ -1,0 +1,212 @@
+<!--Content----------------------->
+<content>
+
+    <!-- <div>
+            <div id="Night" style="display: ; min-height: 100%;">
+                <img src="/images/events.PNG" style="position: absolute; top: 0px; left: 5%; height: auto; width: 100%; z-index: ;">
+                <img src="/images/devicesillustration.PNG" style="position: absolute; top: 0px; left: 5%; min-height: 100%; width: auto; z-index: ;">
+            </div>    
+            <script>
+            document.write("<dl><dd>");
+            var day = new Date();
+            var hr = day.getHours();
+            if (hr == 0) {
+                document.write("Meia-noite!<br>Já é amanhã!");
+            } else if (hr <=5 ) {
+                document.write("&nbsp;&nbsp;Você não<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;devia<br>&nbsp;&nbsp;&nbsp;&nbsp;estar<br>dormindo?");
+            } else if (hr <= 11) {         
+                document.write("Bom dia!");
+            } else if (hr == 12) {
+                document.write("&nbsp;&nbsp;&nbsp;&nbsp;Vamos<br>&nbsp;almoçar?");
+            } else if (hr <= 17) {
+                document.write("Boa Tarde");
+            } else if (hr <= 19) {
+                document.write("&nbsp;Bom final<br>&nbsp;de tarde!");
+            } else if (hr == 20) {
+                document.write("&nbsp;Boa Noite"); 
+                document.getElementById('Noite').style.display='block';
+            } else if (hr == 21) {
+                document.write("&nbsp;Boa Noite"); 
+                document.getElementById('Noite').style.display='none';
+            } else if (hr == 22) {
+                document.write("&nbsp;Boa Noite");
+            } else if (hr == 23) {
+                document.write("Ó Meu! Já é quase meia-noite!");
+            }
+            document.write("</dl></dd>");
+            </script>
+
+    
+</div> -->
+    <content>
+        <kacheln>
+            <kachel>basic tabs links via Argument "einbettung"</kachel>
+        </kacheln>
+    </content>
+    <!-- Twitch tabs links -->
+    <div class="tab basicTab">
+        <button class="button tablinks streamlistitem button "
+            onclick="openDynamicTab(event, 'Monstercat','London is the capital city of England.');   ">
+            <div class="liveicon online"></div>Monstercat
+        </button>
+        <button class="button tablinks "
+            onclick="openDynamicTab(event, 'meddontv', 'Heiße Torten jetzt in deiner Umgebung')">
+            <div class="liveicon offline"></div>Meddon
+        </button>
+        <button class="button tablinks " onclick="openDynamicTab(event, 'esl_csgo')">
+            <div class="live"></div>esl_csgo
+        </button>
+    </div>
+
+    <!-- Tab new content -->
+    <div id="basicTab" class="tabcontent">
+        <h3 id="basicTabTitle"></h3>
+        <!--provisorisch-->
+        <div id="basicTabDescription"></div>
+        <div>
+            Hier könnte noch mehr an iformation stehen als erwartet
+        </div>
+
+        <kacheln>
+            <kachel>
+
+                <img id="basicTabImage" src="images/svg/bblogored.png" width="100px" />
+            </kachel>
+        </kacheln>
+    </div>
+
+    <content>
+        <kacheln>
+            <kachel>W3 tabs links via <strong>html</strong> "einbettung"</kachel>
+        </kacheln>
+    </content>
+
+    <!--  Normal Tab bars-->
+    <div class="basicTab tab">
+        <button class="tablinks streamlistitem button"
+            onclick="openBasicTab(event, 'Monstercat','London is the capital city of England.')">Monstercat </button>
+        <button class="tablinks" onclick="openBasicTab(event, 'meddontv')">Meddon</button>
+        <button class="tablinks" onclick="openBasicTab(event, 'esl_csgo')">esl_csgo</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="Monstercat" class="tabcontent basicTabDescription">
+        <h3>Monstercat</h3>
+        <p>London is the capital city of England.</p>
+        <button class="button buttontransparent" id="Monstercat">Zuschauer</button>
+    </div>
+
+    <div id="meddontv" class="tabcontent basicTabDescription">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+    </div>
+
+    <div id="esl_csgo" class="tabcontent basicTabDescription">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <!-- Tab links -->
+    <fliestext>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+        sea takimata sanctus est Lorem ipsum dolor sit amet.
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+        sea takimata sanctus est Lorem ipsum dolor sit amet.
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+        sea takimata sanctus est Lorem ipsum dolor sit amet.
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+        sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+    </fliestext>
+    <!--fresher content----------------------->
+    <freshcontent>
+
+        <div style="margin-top:5em; margin-bottom:5em; ">
+            <h2>Button Styles</h2>
+            <!--Button Styles-------------------------------->
+            <div style="">
+                <button class="light hover">Button 1</button>
+                <button class="dark hover">Button 1</button>
+                <button class="buttoncolored denied ">Button 2</button>
+                <button class="buttontransparent hover">Button 3</button>
+
+                <button class="light round hover">Button 1</button>
+                <button class="dark round hover">Button 1</button>
+                <button class="buttoncolored round denied ">Button 2</button>
+                <button class="buttontransparent round hover">Button 3</button>
+            </div>
+        </div>
+    </freshcontent>
+    <kacheln>
+        <kachel>
+            <div style="margin-top:5em; margin-bottom:5em; ">
+                <h2>Button Styles</h2>
+                <!--Button Styles-------------------------------->
+                <div style="">
+                    <button class="light hover">Button 1</button>
+                    <button class="dark hover">Button 1</button>
+                    <button class="buttoncolored denied ">Button 2</button>
+                    <button class="buttontransparent hover">Button 3</button>
+
+                    <button class="light round hover">Button 1</button>
+                    <button class="dark round hover">Button 1</button>
+                    <button class="buttoncolored round denied ">Button 2</button>
+                    <button class="buttontransparent round hover">Button 3</button>
+                </div>
+            </div>
+        </kachel>
+    </kacheln>
+
+
+    <hr>
+
+    <h2>Kacheln</h2>
+    <kacheln>
+        <kachel> Kachel 1</kachel>
+        <kachel> Kachel 2</kachel>
+    </kacheln>
+    <kacheln>
+        <kachel> Kachel 1</kachel>
+        <kachel> Kachel 2</kachel>
+        <kachel onclick="loadBBGroupData()"> Kachel 3</kachel>
+    </kacheln>
+    <hr>
+
+    <h2>Creator Cards</h2>
+    <div id="live">
+        <div class="creator">
+            <a href="#">
+                <img alt="bladebros" src="./images/kanta.PNG">
+                <h3>Kantalupi</h3>
+                <button class="button hover buttontransparent">Ansehen</button>
+            </a>
+        </div>
+        <creator class="creator">
+            <a href="#">
+                <img alt="bladebros" src="./images/kanta.PNG">
+                <h3>Meddon</h3>
+                <button class="button hover buttontransparent">Ansehen</button>
+            </a>
+        </creator>
+
+    </div>
+</content>
+
+
+</content>

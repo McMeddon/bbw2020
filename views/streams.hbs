@@ -1,0 +1,32 @@
+<!--IMPORTS-------------------->
+<script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+<content>
+  <kacheln class="two-column">
+    <!--Tab bars-->
+    <!--stream player-->
+    <kachel class="streamcontent">
+      <div id="stream" class="twitch-player fullwidth fullheight"></div>
+    </kachel>
+
+    <!--Tab bars-->
+    <kachel class="" style="max-width: 260px;">
+      <div class="tab">
+        <ul id="streamlist" class="streamlist">
+          <!--load from db-->
+          <script src="/javascripts/twitch.js"></script>
+        </ul>
+      </div>
+      <!-- Streamer Tab content -->
+      <div id="StreamerTab desktop" class="tabcontent">
+        <h3 id="StreamerTabTitle"></h3>
+        <!--provisorisch-->
+        <p id="StreamerTabDescription"></p>
+        <zuschauer>
+          <div> Zuschauer: </div>
+          <div id="StreamerTabViewers"></div>
+        </zuschauer>
+      </div>
+    </kachel>
+  </kacheln>
+</content>

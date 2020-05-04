@@ -1,6 +1,9 @@
 # Logs
 logs
 *.log
+# this is will be generated local after npm install
+package-lock.json
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

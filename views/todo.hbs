@@ -1,0 +1,56 @@
+<content>
+  <kacheln>
+    <kachel>
+      <h1>TODO LISTE </h1>
+    </kachel>
+    <kachel class="two-column">
+      <ol style="">
+        <li> defer more scripts</li>
+        <li></li>
+        <li> </li>
+        <li>Eliminate render-blocking resources</li>
+        <li>Enable text compression
+          <div>kann über cloudflare gemacht werden - hier wird GZIP benötigt oder brotli </div>
+        </li>
+        <li>Remove unused CSS
+          1.8 s
+          Remove dead rules from stylesheets and defer the loading of CSS not used for above-the-fold content to reduce
+          unnecessary bytes consumed by network activity</li>
+        <li>Minify JavaScript
+          0.6 s
+          Minifying JavaScript files can reduce payload sizes and script parse time</li>
+        <li>Ensure text remains visible during webfont load
+          Leverage the font-display CSS feature to ensure text is user-visible while webfonts are loading</li>
+        <li>Avoid enormous network payloads Total size was 3,693 KB
+          Large network payloads cost users real money and are highly correlated with long load times.</li>
+        <li>Avoid chaining critical requests 19 chains found
+          The Critical Request Chains below show you what resources are loaded with a high priority. Consider reducing
+          the length of chains, reducing the download size of resources, or deferring the download of unnecessary
+          resources to improve page load.</li>
+        <li>Keep request counts low and transfer sizes small 50 requests • 3,693 KB
+          To set budgets for the quantity and size of page resources, add a budget.json file. </li>
+        <li></li>
+      </ol>
+    </kachel>
+  </kacheln>
+
+  <kacheln>
+    <kachel>IDEEN</kachel>
+    <kachel>
+      <ul>
+        <li>
+          <ol>
+            <li>Javascript um dynamisch zu bauen
+              <ul>
+                <li> tackle renderblocking resorces mit der methode</li>
+                <li> lookup table von allen klassen und ids und der dazugehörigen css datei, alle notwendigen klassen
+                  dann @import in eine master css datei</li>
+              </ul>
+            </li>
+          </ol>
+        </li>
+      </ul>
+    </kachel>
+  </kacheln>
+
+</content>
